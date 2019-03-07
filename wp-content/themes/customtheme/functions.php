@@ -16,6 +16,7 @@ if (!function_exists('nav_setup')) {
 	}
 }
 
+
 add_action('after_setup_theme','carousel_default_functions');
 if (!function_exists('carousel_default_functions')) {	
 	function carousel_default_functions() {
@@ -33,6 +34,13 @@ if (!function_exists('carousel_default_functions')) {
 		add_image_size('smallest', 300, 300, true);
 		add_image_size('largest', 800, 800, true);
 	}
+}
+
+function strip_gallery_from_content($content) {
+	$the_content = preg_replace('/\[gallery.*ids=.(.*).\]/', "", $content);
+	$the_content = apply_filters('the_content' , $the_content);
+	$the_content = str_replace(']]>', ']]&gt;', $the_content);
+	return $the_content;
 }
 
 function load_stylesheets() {

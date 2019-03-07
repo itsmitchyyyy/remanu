@@ -1,4 +1,7 @@
-<footer class="d-flex justify-content-center p-3">
+<footer class="d-flex justify-content-center pb-3 position-relative pt-5">
+    <div class="position-absolute footer-image-container">
+        <img src="<?php echo get_template_directory_uri()?> /img/avatar-02.jpg" alt="" class="nav-image h-100 w-100">
+    </div>
     <button class="footer-button-up bg-transparent p-3 position-absolute text-white">
         <i class="fa fa-arrow-up"></i>
     </button>
@@ -17,7 +20,7 @@
 				<i class="fab fa-linkedin"></i>
 			</span>
         </div>
-        <div class="d-flex">
+        <div class="d-flex copyright">
             <span>&copy; 2018 ETE REMAN, ALL RIGHTS RESERVED</span>
         </div>
     </div>

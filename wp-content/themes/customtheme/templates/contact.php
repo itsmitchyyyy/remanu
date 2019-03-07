@@ -1,27 +1,53 @@
 <?php /* Template Name: Contact */
 get_header();
 global $post;
-$slug = get_category_by_slug('contact');
-$category = get_posts(array('category' => $slug->cat_ID));
+$category = get_posts();
 include(get_template_directory().'/misc/carousel.php'); ?>
 <div class="container-fluid">
-    <h3>CHECK OUT OUR LATEST LESSONS</h3>
+    <h3>REACH US FOR ANSWERS</h3>
     <div class="d-flex flex-row">
-        <div class="d-flex flex-row post-container flex-wrap justify-content-between w-75 mr-2">
-        <?php $i = 0; ?>
-        <?php foreach($category as $post) : setup_postdata($post); ?>
-        <?php if($i < 4) : ?>
-            <div class="card card-width-blog mt-2">
-                <img src="<?php the_post_thumbnail_url() ?>" alt="Card Image" class="card-img-top" height="200">
-                <div class="card-body">
-                    <h5 class="card-title"><?php the_title(); ?></h5>
-                    <p class="card-text"><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="btn card-button-link text-white">Read More</a>
-                </div>
-            </div> 
-        <?php endif; ?>
-        <?php $i++; ?>   
-        <?php  endforeach; ?>
+        <div class="d-flex flex-column post-container  w-75 mr-2">
+            <div class="d-flex">
+                <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+            </div>
+            <div class="d-flex flex-column mt-4">
+                <h3>SEND US A MESSAGE</h3>
+                <form>
+                    <div class="form-group w-50 contact-form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group w-50 contact-form-group">
+                        <label for="company">Company(Optional)</label>
+                        <input type="text" name="company" id="company" class="form-control">
+                    </div>
+                    <div class="form-group w-50 contact-form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group w-50 contact-form-group">
+                        <label for="telephone">Telephone(Optional)</label>
+                        <input type="text" name="telephone" id="telephone" class="form-control">
+                    </div>
+                    <div class="form-group w-50 contact-form-group">
+                        <label for="comments">Comments</label>
+                        <textarea name="comments" id="comments" class="w-100" rows="5"></textarea>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label>Would You Like To Reciever Our Free Newsletter?</label>
+                        <div class="d-flex flex-row contact-form-checkboxes">
+                            <div class="align-items-center mr-1 form-check">
+                                <input type="radio" class="form-check-input" id="yes" value="Yes" name="option">
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="align-items-center ml-1 form-check">
+                                <input type="radio" class="form-check-input" id="no" value="No" name="option">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="align-items-center side-post-container d-flex flex-column w-25 ml-3">
             <div class="m-2 w-100">

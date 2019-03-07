@@ -28,9 +28,12 @@
 		</div>
 	</div>
 </header>
+<div class="position-absolute nav-image-container">
+	<img src="<?php echo get_template_directory_uri() ?>/img/avatar-02.jpg" alt="" class="nav-image h-100 w-100">
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container">
-		<a class="navbar-brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a>
+		<a class="navbar-brand" href="#"></a>
 		<button class="navbar-toggler" type="button">
 		<span class="navbar-toggler-icon"></span>
 		</button>
