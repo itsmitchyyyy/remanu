@@ -4,6 +4,11 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
+	<title>
+		<?php if(is_frontpage()) : bloginfo('title') ?>
+		<?php else : wp_title() ?>
+		<?php endif; ?>
+	</title>
 </head>
 <body <?php body_class(); ?>>
 <?php $custom_theme_data = custom_theme_get_options(); ?>
@@ -29,7 +34,7 @@
 	</div>
 </header>
 <div class="position-absolute nav-image-container">
-	<img src="<?php echo get_template_directory_uri() ?>/img/avatar-02.jpg" alt="" class="nav-image h-100 w-100">
+	<img src="<?php echo get_template_directory_uri() ?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container">

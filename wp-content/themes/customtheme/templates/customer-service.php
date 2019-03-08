@@ -25,7 +25,7 @@ $category = get_posts(array('category' => $slug->cat_ID)); ?>
             <div class="border-custom"></div>
             <div class="d-flex flex-row mt-2 mr-2 mb-2 sales-person-data">
                 <div class="d-flex sales-image-person">
-                    <img src="<?php echo get_template_directory_uri()?> /img/avatar-02.jpg" alt="" class="w-100 h-100">
+                    <img src="<?php echo get_template_directory_uri()?>/img/remanu.png" alt="" class="w-100 h-100">
                 </div>
                 <div class="d-flex w-100 ml-2">
                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>

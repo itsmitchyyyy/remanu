@@ -1,6 +1,6 @@
 <footer class="d-flex justify-content-center pb-3 position-relative pt-5">
     <div class="position-absolute footer-image-container">
-        <img src="<?php echo get_template_directory_uri()?> /img/avatar-02.jpg" alt="" class="nav-image h-100 w-100">
+        <img src="<?php echo get_template_directory_uri()?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
     </div>
     <button class="footer-button-up bg-transparent p-3 position-absolute text-white">
         <i class="fa fa-arrow-up"></i>
