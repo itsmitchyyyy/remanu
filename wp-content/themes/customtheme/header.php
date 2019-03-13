@@ -3,9 +3,11 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/remanu.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
 	<?php wp_head(); ?>
 	<title>
-		<?php if(is_frontpage()) : bloginfo('title') ?>
+		<?php if(is_front_page()) : bloginfo('title') ?>
 		<?php else : wp_title() ?>
 		<?php endif; ?>
 	</title>
@@ -13,11 +15,13 @@
 <body <?php body_class(); ?>>
 <?php $custom_theme_data = custom_theme_get_options(); ?>
 <header class="sticky-top">
-	<div class="d-flex row-wrap">
-		<div class="d-flex flex-grow-1 justify-content-end">
-			<span class="m-1">Your weekly source of sales, marketing, customer service, and management insight - Compliments of Ete Raman</span>
+	<div class="d-flex row-wrap container">
+		<div class="d-flex headline flex-grow-1 justify-content-end align-items-center">
+			<div class="container pl-0">
+				<span class="text-center header-text">Your weekly source of sales, marketing, customer service, and management insight - compliments of Ete Raman</span>
+			</div>
 		</div>
-		<div class="align-items-center d-flex flex-grow-1 flex-row justify-content-center">
+		<div class="align-items-center d-flex flex-grow-1 flex-row justify-content-end">
 			<span class="m-1">
 				<i class="far fa-envelope"></i>
 			</span>
@@ -34,10 +38,12 @@
 	</div>
 </header>
 <div class="position-absolute nav-image-container">
-	<img src="<?php echo get_template_directory_uri() ?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
+	<a href="<?php echo get_home_url() ?>">
+		<img src="<?php echo get_template_directory_uri() ?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
+	</a>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container">
+<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+	<div class="container-fluid">
 		<a class="navbar-brand" href="#"></a>
 		<button class="navbar-toggler" type="button">
 		<span class="navbar-toggler-icon"></span>
@@ -49,7 +55,7 @@
 					'menu_id' => 'primary-menu',
 					'depth' => 2,
 					'container' => false,
-					'menu_class' => 'navbar-nav mr-auto',
+					'menu_class' => 'navbar-nav mx-auto',
 					'walker' => new Bootstrap_NavWalker(),
 					'fallback_cb' => 'Bootstrap_NavWalker::fallback'
 				)

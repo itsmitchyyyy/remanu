@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide lazy" data-ride="carousel">
   <ol class="carousel-indicators">
 
     <?php $carousel = new WP_Query(array(
@@ -18,10 +18,11 @@
       while ($carousel->have_posts()) : $carousel->the_post(); $count++; ?>
         <?php if($count == 1) : ?>
           <div class="carousel-item active">
+          <div class="d-block w-100 carousel-image-height"  style="background-image: url('<?php the_post_thumbnail_url() ?>')"></div>
         <?php else : ?>
           <div class="carousel-item">
+          <div class="d-block w-100 carousel-image-height"  data-src="<?php the_post_thumbnail_url() ?>"></div>
         <?php endif; ?>
-            <img class="d-block w-100 carousel-image-height"  src="<?php the_post_thumbnail_url() ?>">
           <div class="carousel-caption flex-column d-flex justify-content-center align-items-center h-100">
             <h3 class="carousel-caption-title"><?php the_title(); ?></h3>
             <a href="<?php the_permalink() ?>" class="mt-5 carousel-caption-btn btn text-white pr-5 pl-5">Read More</a>

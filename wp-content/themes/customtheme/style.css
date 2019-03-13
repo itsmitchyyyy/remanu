@@ -2,6 +2,9 @@
 Theme Name: Custom Theme
 Auth: Mitch Alforque
 */
+html * {
+	font-family: 'Gotham Book';
+}
 
 body {
 	background: #e7e7e7;
@@ -10,7 +13,7 @@ body {
 header {
 	background: #495a73;
 	width: 100%;
-	height: 5vh;
+	height: 100%;
 	color: #ffffff;
 	border-bottom: 1px solid gray;
 }
@@ -22,7 +25,37 @@ footer {
 
 .footer-button-up {
 	border: 1px solid white !important;
-    right: 2em;
+	right: 5em;
+	bottom: 3em;
+}
+
+.footer-button-up > i {
+	font-size: 5vh;
+}
+
+.front-page-title {
+	color: #2f4688;
+    font-size: 2em;
+}
+
+.front-page-recent {
+	color: #000000;
+    text-decoration: underline;
+}
+
+.front-page-card-body {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.front-page-card-text {
+	font-size: 14px;
+	font-family: 'Poppins';
+	margin-top: .5em;
+}
+
+.card-date-text-color {
+	font-family: 'Gotham Light';
 }
 
 .bg-light {
@@ -46,8 +79,28 @@ footer {
 	border: 1px solid #495a73;
 }
 
+.copyright {
+	font-size: 10px;
+}
+
+.nav-link {
+	font-size: 15px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-family: 'Gotham Bold';
+	text-transform: uppercase;
+}
+
+.header-text {
+	font-family: 'Gotham';
+	font-weight: bold;
+	font-size: 14px;
+}
+
 .carousel-caption-title {
-	text-shadow: 2px 2px #cccccc;
+	font-family: 'Gotham Bold';
+	font-size: 50px;
+	text-transform: uppercase;
 }
 
 .carousel-caption-btn {
@@ -56,7 +109,15 @@ footer {
 }
 
 .card-width-blog {
-	width: 30em;
+	/* font-weight: bold; */
+	width: 45%;
+}
+
+.front-page-card-title {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: 'Poppins';
+	font-size: 3vmin;
 }
 
 .card-button-link {
@@ -65,6 +126,8 @@ footer {
 
 .carousel-image-height {
 	height: 80vh;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .carousel-indicators .active {
@@ -72,8 +135,9 @@ footer {
 }
 
 .carousel-indicators li {
-	border: .3em solid transparent;
-	width: .3em;
+	border: 1px solid #ffffff;
+	width: 10px;
+	height: 10px;
 	border-radius: 100%;
 	background: #6e7c90;
 }
@@ -85,6 +149,7 @@ footer {
 
 .sales-image {
 	height: 50vh;
+	width: 50vw;
 }
 
 .sales-image-person {
@@ -93,12 +158,14 @@ footer {
 }
 
 .nav-image-container {
-	top: 1em;
+	top: 1.5em;
     bottom: 0;
-    height: 100px;
+    height: 80px;
     z-index: 1021;
-    width: 100px;
-    left: 2em;
+    width: 80px;
+	left: 2em;
+    border-radius: 100%;
+    box-shadow: 0px 2px 10px 1px #6e7c90;
 }
 
 .nav-image {
@@ -107,20 +174,78 @@ footer {
 
 .footer-image-container {
 	height: 100px;
-    bottom: 10vh;
-    left: 45.5vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	bottom: 12vh;
+    box-shadow: 0px 2px 10px 2px #6e7c90;
+    left: 47vw;
+    border-radius: 100%;
+    background-image: url(http://remanu.paykame.com/wp-content/themes/customtheme/img/remanu.png);
     width: 100px;
 }
 
+#primary-menu {
+	align-items: flex-end;
+}
+
+#navCollapse {
+	align-items: flex-end;
+}
 
 @media (max-width: 1199.98px) { 
 	.card-width-blog {
 		width: 22.5em;
 	}
+
+	.footer-image-container {
+		bottom: 13vh;
+		left: 46vw;
+	}
+
+	.nav-image-container {
+		top: 2em;
+		left: .5em;
+		height: 80px;
+		width: 80px;
+	}
+
+	.navbar-brand {
+		margin-right: 2em;
+	}
+ }
+
+ @media (max-width: 1024px) {
+
+	 #primary-menu {
+		 align-items: flex-start;
+	 }
+
+	.navbar-collapse {
+		position: fixed;
+		min-width: 300px;
+		max-width: 300px;
+		height: 100vh;
+		padding: 1em;
+		top: 3em;
+		right: 0;
+		transition: all 0.2s ease-in-out;
+		z-index: 9999;
+		overflow: auto;
+		background: #ffffff;
+	}
  }
 
  @media (max-width: 991.98px) {
 	
+	.nav-image-container {
+		top: 2.5em;
+		left: .5em !important;
+	}
+
+	.headline {
+		margin-left: 3rem;
+	}
 
 	.post-container {
 		width: 50% !important;
@@ -131,8 +256,21 @@ footer {
 		width: 30em !important;
 	}
 
+	.footer-image-container {
+		bottom: 13	vh;
+		left: 45vw;
+	}
+
 	.side-post-container {
 		width: 50% !important;
+	}
+
+	#primary-menu {
+		align-items: flex-start;
+	}
+	
+	#navCollapse {
+		align-items: flex-start;
 	}
  }
 
@@ -163,14 +301,44 @@ footer {
 		overflow: auto;
 		background: #ffffff;
 	}
+
+	#primary-menu {
+		align-items: flex-start;
+	}
+	
+	#navCollapse {
+		align-items: flex-start;
+	}
  }
 
 
 @media (max-width: 575.98px) {
 	.header {display: none}
 
+	.article-container {
+		margin-right: 1em !important;
+		margin-left: 1em !important;
+	}
+
+	.carousel-caption-title {
+		font-size: 2em;
+	}
+
+	.nav-image-container {
+		top: .5em !important;
+		left: .5em !important;
+	}
+
+	.sales-image {
+		width: 100%;
+	}
+
 	.copyright {
 		width: 80% !important;
+	}
+
+	.footer-button-up {
+		right: 1em;
 	}
 
 	.sales-person-data{
@@ -206,6 +374,14 @@ footer {
 	
 	.footer-image-container {
 		bottom: 15vh;
-		left: 35.5vw;
+		left: 35vw;
+	}
+
+	#primary-menu {
+		align-items: flex-start;
+	}
+	
+	#navCollapse {
+		align-items: flex-start;
 	}
  }

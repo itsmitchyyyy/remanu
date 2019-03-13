@@ -1,22 +1,20 @@
 <footer class="d-flex justify-content-center pb-3 position-relative pt-5">
-    <div class="position-absolute footer-image-container">
-        <img src="<?php echo get_template_directory_uri()?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
-    </div>
-    <button class="footer-button-up bg-transparent p-3 position-absolute text-white">
-        <i class="fa fa-arrow-up"></i>
+    <div class="position-absolute footer-image-container"></div>
+    <button class="footer-button-up bg-transparent position-absolute text-white" id="scrollToTop">
+        <i class="fa fa-angle-up m-2"></i>
     </button>
     <div class="d-flex flex-column">
         <div class="d-flex flex-row justify-content-center">
-            <span class="m-1">
+            <span class="m-2">
 				<i class="far fa-envelope"></i>
 			</span>
-			<span class="m-1">
+			<span class="m-2">
 				<i class="fab fa-twitter"></i>
 			</span>
-			<span class="m-1">
+			<span class="m-2">
 				<i class="fab fa-facebook-f"></i>
 			</span>
-			<span class="m-1">
+			<span class="m-2">
 				<i class="fab fa-linkedin"></i>
 			</span>
         </div>

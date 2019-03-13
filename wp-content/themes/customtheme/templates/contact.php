@@ -4,13 +4,15 @@ global $post;
 $category = get_posts();
 include(get_template_directory().'/misc/carousel.php'); ?>
 <div class="container-fluid">
-    <h3>REACH US FOR ANSWERS</h3>
-    <div class="d-flex flex-row">
+    <div class="d-flex flex-row mt-5 mb-5">
         <div class="d-flex flex-column post-container  w-75 mr-2">
+            <div class="d-flex w-100">
+                <h3>REACH US FOR ANSWERS</h3>
+            </div>
             <div class="d-flex">
                 <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
             </div>
-            <div class="d-flex flex-column mt-4">
+            <div class="d-flex flex-column mt-5">
                 <h3>SEND US A MESSAGE</h3>
                 <form>
                     <div class="form-group w-50 contact-form-group">
@@ -46,6 +48,9 @@ include(get_template_directory().'/misc/carousel.php'); ?>
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <button class="carousel-caption-btn btn text-white">SEND</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -69,14 +74,14 @@ include(get_template_directory().'/misc/carousel.php'); ?>
                 </div>
             </div>
             <div class="m-2 w-100 border-custom">
-                <div class="d-flex flex-column p-2 border">
+                <div class="bg-light border d-flex flex-column p-2">
                     <div class="m-1">
                         <h3 class="text-custom">RECENT LESSONS</h3>
                     </div>
                     <div class="m-1">
                         <ul>
                             <?php foreach($category as $post) : setup_postdata($post); ?>
-                                <li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
+                                <li><a class="front-page-recent" href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
