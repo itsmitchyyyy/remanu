@@ -1,0 +1,189 @@
+/*
+Theme Name: Etereman Theme
+Auth: Mitch Alforque
+*/
+
+/* Custom  */
+.margin-2 {
+    margin: 2em;
+}
+
+.margin-b-1 {
+    margin-bottom: 1em; 
+}
+
+.margin-r-2 {
+    margin-right: 2em;
+}
+
+.margin-l-2 {
+    margin-left: 2em;
+}
+
+.margin-x-2 {
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.sticky-top {
+    position: sticky;
+    -webkit-position: sticky;
+    z-index: 1020;
+    top: 0;
+}
+
+
+/* LOGO */
+.etereman-logo {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: .5em;
+    top: -.5em;
+}
+
+/* headline */
+.headline {
+    background: #002679;
+    height: 7vh;
+}
+
+.headline-text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.headline-text span {
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.headline-icons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.headline-icons span{
+    margin-right: 1em;
+}
+
+.headline-icons span > i {
+    font-size: 20px;
+}
+
+
+/* text-black */
+.text-black {
+    color: #000000;
+}
+
+/* background white */
+.white-bg {
+    background: #ffffff;
+}
+
+/* default bg */
+.default-bg  {
+    background: #002679;
+}
+
+/* nav-items */
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* nav-items links */
+.nav-center li > a {
+    color: #002679;
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+li > a.active {
+    color: #f92c2c !important   ;
+}
+
+/* carousel  */
+.carousel {
+    height: 500px !important;
+}
+
+.carousel-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.indicator-item {
+    height: 1em !important;
+    width: 1em !important;
+    border: 1px solid #ffffff;
+}
+
+.indicator-item.active {
+    background-color: #f92c2c !important;
+    border: none !important;
+}
+
+/* footer */
+.footer-wrapper {
+    padding: 4em 0 2em 0;
+}
+
+.content-container {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gotham Book';
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icons span {
+    margin-right: 1em;
+}
+
+.footer-text{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Gotham Book';
+    font-size: 12px;
+}
+
+@media (max-width: 575.98px) { 
+    .headline {
+        display: none;
+    }
+
+    .etereman-logo {
+        left: -7em;
+        top: .5em;
+        height: 80px;
+        width: 80px;
+    }
+}
