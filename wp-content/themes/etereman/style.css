@@ -8,16 +8,28 @@ Auth: Mitch Alforque
     margin: 2em;
 }
 
-.margin-b-1 {
-    margin-bottom: 1em; 
-}
-
 .margin-r-2 {
     margin-right: 2em;
 }
 
 .margin-l-2 {
     margin-left: 2em;
+}
+
+.margin-t-1 {
+    margin-top: 1em;
+}
+
+.margin-t-2 {
+    margin-top: 2em;
+}
+
+.margin-b-1 {
+    margin-bottom: 1em; 
+}
+
+.margin-b-2 {
+    margin-bottom: 2em;
 }
 
 .margin-x-2 {
@@ -45,7 +57,7 @@ Auth: Mitch Alforque
 /* headline */
 .headline {
     background: #002679;
-    height: 7vh;
+    height: 6vh;
 }
 
 .headline-text {
@@ -91,6 +103,19 @@ Auth: Mitch Alforque
     background: #002679;
 }
 
+.flexbox-row-center {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* background red */
+.red-bg {
+    background: #ca2730;
+}
+
 /* nav-items */
 .nav-center {
     display: flex;
@@ -112,21 +137,34 @@ li > a.active {
 
 /* carousel  */
 .carousel {
-    height: 500px !important;
+    height: 600px !important;
 }
 
 .carousel-caption {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 80%;
+    width: 50%;
     text-transform: uppercase;
+}
+
+.carousel-caption h2 {
+    font-family: 'Gotham Bold';
+    font-size: 3rem !important;
+    line-height: 48px !important;
 }
 
 .carousel-item {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.carousel .indicators {
+    bottom: 9em;
+}
+
 .indicator-item {
     height: 1em !important;
     width: 1em !important;
@@ -136,6 +174,185 @@ li > a.active {
 .indicator-item.active {
     background-color: #f92c2c !important;
     border: none !important;
+}
+
+/* page content */
+
+/* info */
+.info-top {
+    position: absolute;
+    bottom: 8em;
+    z-index: 1022;
+    width: 80em;
+    height: 26vh;
+}
+
+.info-image {
+    height:  26vh;
+}
+
+.info-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.info-text-divider {
+    width: 1em !important;
+    align-self: center;
+    height: 5px !important;
+}
+
+.info-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5em !important;
+    font-family: 'Gotham Book';
+    color: #ffffff;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.info-text-top {
+    font-size: 18px;
+}
+
+.info-text-bottom {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* company overview */
+.company-info {
+    margin-top: 10em;
+}
+
+.company-info-header {
+    font-family: 'Gotham Light';
+}
+
+.company-info-header-text h3 {
+    font-size: 30px !important;
+    color: #002679;
+}
+
+.company-info-header-video {
+    display: flex;
+    height: 60vh;
+    width: 80em;
+}
+
+.company-info-header-video iframe{ 
+    height: 100%;
+    width: 100%;
+} 
+
+/* services */
+.services-list {
+    height: 70vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+
+.services-list .card {
+    height: 100%;
+    border-top: 2px solid #ca2730;
+}
+
+.services-info {
+    height: 50%;
+    padding: .5em !important;
+}
+
+.services-info-details {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-info-details-text {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 80%;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Gotham Bold';
+    font-size: 35px;
+}
+
+.service-info-details-buttons {
+    display: flex;
+    height: 20%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.service-info-details-buttons button {
+    background: #ca2730;
+    border: 1px solid #d3d3d3;
+    margin: 1em;
+    width: 45%;
+}
+
+.btn:hover {
+    background: #ca2730;
+} 
+
+/* feedback */
+.feedback-info {
+    height: 70vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: 20vh;
+}
+
+.feedback-info .card-container {
+    height: 100%;
+    border-top: 2px solid #ca2730;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feedback-logo {
+    position: absolute;
+    height: 250px;
+    left: 40%;
+    top: -18%;
+    width: 250px;
+}
+
+.feedback-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.feedback-heading {
+    display: flex;
+    margin-top: 5em;
+    height: 20%;
+    font-size: 30px;
+    font-family: 'Gotham Light';
+    text-transform: uppercase;
+}
+
+.feedback-heading span {
+    color: #002679;
+}
+
+.feedback-card {
+    max-width: 400px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.feedback-card-content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* footer */
@@ -175,6 +392,113 @@ li > a.active {
     font-size: 12px;
 }
 
+
+ @media (max-width: 1441.98px) {
+    .carousel .indicators {
+        bottom: 8em;
+    }
+
+	.info-top {
+	  bottom: 3em;
+      width: 60em;
+      height: 25vh;
+    }
+    
+    .info-image {
+        height: 25vh;
+    }
+   
+    .carousel .indicators {
+        bottom: 7em;
+    }
+} 
+
+@media (max-width: 1024px) {
+    .sidenav.right-aligned {
+        z-index: 1023;
+    } 
+
+    .headline-icons span > i {
+        font-size: 18px;
+    }
+
+    .headline-text span {
+        font-size: 11px;
+    }
+
+    nav .sidenav-trigger {
+        display: block !important;
+    }
+
+    .hide-on-med-and-down {
+        display: none !important;
+    }
+
+    .info-top {
+        bottom: 4em;
+        left: 12em;
+        right: 12em;
+        width: auto;
+        height: 22vh;
+    }
+
+    .info-image {
+        height: 22vh;
+    }
+
+    .carousel .indicators {
+        bottom: 6em;
+    }
+
+    .info-text-top {
+        font-size: 16px;
+    }
+
+    .info-text-bottom {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 991.98px) { 
+    br {
+        display: none;
+    }
+
+    .carousel .indicators {
+        bottom: 7em;
+    }
+
+    .info-top {
+        bottom: 4em;
+        width: auto;
+        height: 23vh;
+        left: 7em;
+        right: 7em;
+    }
+
+    .info-image {
+        height: 23vh;
+    }
+
+    .info-text-top {
+        font-size: 13px;
+    }
+
+    .info-text-bottom {
+        font-size: 10px;
+        white-space: unset;
+    }
+
+    .headline-text span {
+        font-size: 10px;
+    }
+
+    .etereman-logo {
+        right: 9em;
+        left: initial;
+    }
+}
+
 @media (max-width: 575.98px) { 
     .headline {
         display: none;
@@ -185,5 +509,55 @@ li > a.active {
         top: .5em;
         height: 80px;
         width: 80px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .carousel .indicators {
+        bottom: 2em;
+    }
+
+    .info-top {
+        width: auto;
+        bottom: 5em;
+        right: 1em;
+        left: 1em;
+        height: 22vh;
+    }
+
+    .info-image {
+        display: flex;
+        align-items: center;
+        height: 22vh;
+    }
+
+    .info-image img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .info-text-divider {
+        display: none;
+    }
+
+    .info-text {
+        text-align: center;
+        padding: 1em !important;
+    }
+
+    .info-text-top {
+        font-size: 10px;
+    }
+
+    .info-text-bottom {
+        margin-top: 1em;
+        font-size: 10px;
+        white-space: unset;
+    }
+
+    .company-info {
+        margin-top: 15em;
     }
 }
