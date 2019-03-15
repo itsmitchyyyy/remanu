@@ -7,7 +7,7 @@ if (!function_exists('nav_setup')) {
 	function nav_setup() {
 		register_nav_menus(
 			array(
-				'top-menu' => __('Top Menu', 'theme'),
+				'primary-menu' => __('Primary Menu', 'theme'),
 				'footer-menu' => __('Footer Menu', 'theme'),
 			)
 		);

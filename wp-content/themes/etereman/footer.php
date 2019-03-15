@@ -1,4 +1,8 @@
 <footer class="default-bg">
+    <div class="footer-logo" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/etereman.png)"></div>
+    <div class="footer-button" id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
     <div class="navbar-wrapper footer-wrapper">
         <div class="content-container">
             <div class="margin-r-2 margin-b-1 footer-text">

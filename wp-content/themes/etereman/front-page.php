@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php include('misc/carousel.php') ?>
-<div class="container">
+<div class="container main-cont">
+	<div class="message-icon" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/message.png)"></div>
 	<div class="row red-bg info-top">
 		<div class="col s4 info-image">
 			<img src="<?php echo get_template_directory_uri() ?>/img/etereman1985.png" alt="">
@@ -28,14 +29,14 @@
 				<h3>COMPANY OVERVIEW</h3>
 			</div>
 			<div class="company-info-header-video">
-				<iframe src="https://www.youtube.com/embed/w4mfZZvx7Os" frameborder="0"></iframe>
+				<iframe src="https://www.youtube.com/embed/w4mfZZvx7Os" frameborder="0" height="350" width="350"></iframe>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="row services-list">
 	<div class="card">
-		<div class="col s6 services-info">
+		<div class="col s12 m12 l6 services-info">
 			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-1.jpg)">
 				<div class="service-info-details-text">
 					<span>vehicle owners</span>
@@ -46,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col s6 services-info">
+		<div class="col s12 m12 l6 services-info">
 			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-2.jpg)">
 				<div class="service-info-details-text">
 					<span>PRODUCT SUPPORT</span>
@@ -56,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col s6 services-info">
+		<div class="col s12 m12 l6 services-info">
 			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-3.jpg)">
 				<div class="service-info-details-text">
 					<span>buyete</span>
@@ -66,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col s6 services-info">
+		<div class="col s12 m12 l6 services-info">
 			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-4.jpg)">
 				<div class="service-info-details-text">
 					<span>careers</span>
@@ -88,7 +89,8 @@
 			<div class="container">
 				<div class="flexbox-row-center">
 					<div class="card feedback-card">
-						<div>
+						<div class="feedback-card-content">
+							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
 							<span>Gordon Liske</span>
 							<span>Vehicle Owner</span>
 							<span>
@@ -99,6 +101,7 @@
 					</div>
 					<div class="card feedback-card">
 						<div class="feedback-card-content">
+							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
 							<span>Gordon Liske</span>
 							<span>Vehicle Owner</span>
 							<span>
@@ -108,12 +111,15 @@
 						</div>
 					</div>
 				</div>
+				<div class="feedback-divider">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<h1><?php the_title(); ?></h1>
-	<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-	<?php the_content(); ?>
-<?php endwhile; endif; ?>	
 <?php get_footer(); ?>

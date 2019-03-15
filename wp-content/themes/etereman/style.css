@@ -105,6 +105,7 @@ Auth: Mitch Alforque
 
 .flexbox-row-center {
     display: flex;
+    flex-flow: row wrap;
     height: 100%;
     width: 100%;
     justify-content: center;
@@ -162,7 +163,7 @@ li > a.active {
     background-size: cover;
 }
 .carousel .indicators {
-    bottom: 9em;
+    bottom: 7em;
 }
 
 .indicator-item {
@@ -177,18 +178,32 @@ li > a.active {
 }
 
 /* page content */
+.main-cont {
+    position: relative;
+}
+
+.message-icon {
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -15%;
+    top: -30%;
+    background-size: cover;
+    border-radius: 100%;
+}
+
 
 /* info */
 .info-top {
     position: absolute;
-    bottom: 8em;
-    z-index: 1022;
-    width: 80em;
-    height: 26vh;
+    top: -18em;
+    z-index: 1019;
+    height: 14em;
 }
 
 .info-image {
-    height:  26vh;
+    height:  14em;
 }
 
 .info-image img {
@@ -239,7 +254,6 @@ li > a.active {
 .company-info-header-video {
     display: flex;
     height: 60vh;
-    width: 80em;
 }
 
 .company-info-header-video iframe{ 
@@ -252,6 +266,7 @@ li > a.active {
     height: 70vh;
     margin-left: 15vh;
     margin-right: 15vh;
+    margin-top: 10em;
 }
 
 .services-list .card {
@@ -277,7 +292,7 @@ li > a.active {
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 80%;
+    height: 75%;
     color: #ffffff;
     text-transform: uppercase;
     font-family: 'Gotham Bold';
@@ -286,14 +301,15 @@ li > a.active {
 
 .service-info-details-buttons {
     display: flex;
-    height: 20%;
+    height: 25%;
     flex-flow: row wrap;
     justify-content: center;
 }
 .service-info-details-buttons button {
     background: #ca2730;
     border: 1px solid #d3d3d3;
-    margin: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
     width: 45%;
 }
 
@@ -303,24 +319,27 @@ li > a.active {
 
 /* feedback */
 .feedback-info {
-    height: 70vh;
+    height: 100%;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: 20vh;
+    margin-top: 15em;
+    margin-bottom: 5em;
 }
 
 .feedback-info .card-container {
     height: 100%;
-    border-top: 2px solid #ca2730;
+    border: none;
+    border-top: 2px solid #ca2730 ;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: none !important;
 }
 
 .feedback-logo {
     position: absolute;
     height: 250px;
     left: 40%;
-    top: -18%;
+    top: -30%;
     width: 250px;
 }
 
@@ -340,22 +359,97 @@ li > a.active {
     text-transform: uppercase;
 }
 
+.feedback-header .container {
+    margin-top: 2em;
+}
+
 .feedback-heading span {
     color: #002679;
 }
 
 .feedback-card {
-    max-width: 400px;
+    max-width: 350px;
     padding: 1em;
     margin: 1em;
+}
+
+.feedback-card-content-logo {
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; 
+    top: -15%;
 }
 
 .feedback-card-content {
     display: flex;
     flex-direction: column;
+    font-family: 'Gotham Book';
+}
+.feedback-card-content span:nth-child(2) {
+    margin-top: 1em;
+}
+
+.feedback-card-content span:nth-child(3) {
+    font-size: 13px;
+    color: #ca2730;
+}
+
+.feedback-card-content span:last-child {
+    margin-top: 1em;
+    font-family: 'Gotham Light';
+}
+
+.feedback-divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
+.feedback-divider span {
+    height: 3px;
+    width: 5vh;
+    background: red;
+    margin-right: .5em;
+    margin-left: .5em;
 }
 
 /* footer */
+footer {
+    position: relative;
+}
+
+.footer-button {
+    position: absolute;
+    border: 1px solid #ffffff;
+    right: 5%;
+    padding: .5em 1em .5em 1em;
+    color: #ffffff;
+    top: 15%;
+    cursor: pointer;
+}
+
+.footer-button i {
+    font-size: 3em;
+}
+
+.footer-logo {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 45%;
+    top: -35%;
+}
+
 .footer-wrapper {
     padding: 4em 0 2em 0;
 }
@@ -392,28 +486,22 @@ li > a.active {
     font-size: 12px;
 }
 
-
- @media (max-width: 1441.98px) {
-    .carousel .indicators {
-        bottom: 8em;
+@media (min-width: 1900px) {
+    .info-top {
+        left: 0;
+        right: 0;
     }
 
-	.info-top {
-	  bottom: 3em;
-      width: 60em;
-      height: 25vh;
+    .message-icon {
+        right: -40%;
     }
-    
-    .info-image {
-        height: 25vh;
-    }
-   
-    .carousel .indicators {
-        bottom: 7em;
-    }
-} 
+}
 
 @media (max-width: 1024px) {
+    .etereman-logo {
+        left: .5em;
+    }
+
     .sidenav.right-aligned {
         z-index: 1023;
     } 
@@ -435,15 +523,22 @@ li > a.active {
     }
 
     .info-top {
-        bottom: 4em;
-        left: 12em;
-        right: 12em;
+        top: -55%;
+        left: 0;
+        right: -;
         width: auto;
-        height: 22vh;
+        height: 16em;
     }
 
     .info-image {
-        height: 22vh;
+        height: 16em;
+    }
+
+    .message-icon {
+        height: 80px;
+        width: 80px;
+        right: -15%;
+        top: -25%;
     }
 
     .carousel .indicators {
@@ -456,6 +551,14 @@ li > a.active {
 
     .info-text-bottom {
         font-size: 10px;
+    }
+
+    .service-info-details-buttons button {
+        width: 40%;
+    }
+
+    .feedback-card {
+        max-width: 250px;
     }
 }
 
@@ -471,13 +574,20 @@ li > a.active {
     .info-top {
         bottom: 4em;
         width: auto;
-        height: 23vh;
+        height: 16em;
         left: 7em;
         right: 7em;
     }
 
     .info-image {
-        height: 23vh;
+        height: 16em;
+    }
+
+    .message-icon {
+        height: 80px;
+        width: 80px;
+        right: -5%;
+        top: -25%;
     }
 
     .info-text-top {
@@ -494,12 +604,39 @@ li > a.active {
     }
 
     .etereman-logo {
-        right: 9em;
+        right: 9.5em;
+        height: 90px;
+        width: 90px;
         left: initial;
+    }
+
+    .services-list {
+        height: 75vh;
+    }
+
+    .feedback-info {
+        margin-top: 50em;
+    }
+
+    .feedback-logo {
+        height: 150px;
+        width: 150px;
+        top: -10%;
+    }
+
+    .feedback-card {
+        margin: 1em 1em 2em 1em;
     }
 }
 
 @media (max-width: 575.98px) { 
+    .message-icon {
+        height: 70px;
+        width: 70px;
+        z-index: 1021;
+        right: -3%;
+        top: -20%;
+    }
     .headline {
         display: none;
     }
@@ -519,18 +656,36 @@ li > a.active {
         bottom: 2em;
     }
 
+    .services-list {
+        height: 100vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .service-info-details-text {
+        height: 70%;
+    }
+
+    .service-info-details-buttons {
+        height: 30%;
+    }
+
+    .service-info-details-buttons button {
+        width: 80%;
+    }
+
     .info-top {
         width: auto;
         bottom: 5em;
         right: 1em;
         left: 1em;
-        height: 22vh;
+        height: 14em;
     }
 
     .info-image {
         display: flex;
         align-items: center;
-        height: 22vh;
+        height: 14em;
     }
 
     .info-image img {
@@ -559,5 +714,46 @@ li > a.active {
 
     .company-info {
         margin-top: 15em;
+    }
+
+    .feedback-info {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 50em;
+    }
+
+    .feedback-logo {
+        height: 100px;
+        left: 40%;
+        top: -8%;
+        width: 100px;
+    }
+
+
+    .feedback-card {
+        margin: 1em 1em 2em 1em;
+    }
+
+    .feedback-heading {
+        font-size: 20px;
+    }
+
+    .footer-icons {
+        display: none;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }    
+
+    .footer-copyright {
+        font-size: 10px;
+    }
+
+    .footer-logo {
+        height: 80px;
+        width: 80px;
+        left: 1%;
+        top: 20%;
     }
 }

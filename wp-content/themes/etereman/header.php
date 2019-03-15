@@ -1,3 +1,4 @@
+<?php $menu = wp_get_nav_menu_items("primary-menu" ); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -49,25 +50,33 @@
 		  </a>
 	      <a href="#" data-target="mobile-demo" class="sidenav-trigger right text-black"><i class="material-icons">menu</i></a>
 		  <ul class="nav-center hide-on-med-and-down">
-	        <li><a href="sass.html" class="active">Home</a></li>
-	        <li><a href="badges.html">Buyete</a></li>
-	        <li><a href="collapsible.html">Product Support</a></li>
-	        <li><a href="mobile.html">About</a></li>
-	        <li><a href="sass.html">Plant Tour</a></li>
-	        <li><a href="badges.html">Reman U</a></li>
-	        <li><a href="collapsible.html">Warranty Info</a></li>
-	        <li><a href="mobile.html">Car Care Centers</a></li>
-	        <li><a href="mobile.html">Careers</a></li>
-	        <li><a href="mobile.html">Contact</a></li>
+				<?php foreach($menu as $menus): ?>
+					<li>
+						<?php if(is_page($menus->title)) : ?>
+						<a href="<?php echo $menus->url; ?>" class="active">
+						<?php else: ?>
+						<a href="<?php echo $menus->url; ?>">
+						<?php endif; ?>
+							<?php echo $menus->title ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
 	      </ul>
 	    </div>
 	</nav>
 </div>
 <!-- MOBILE -->
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+	<?php foreach($menu as $menus): ?>
+		<li>
+			<?php if(is_page($menus->title)) : ?>
+			<a href="<?php echo $menus->url; ?>" class="active">
+			<?php else: ?>
+			<a href="<?php echo $menus->url; ?>">
+			<?php endif; ?>
+				<?php echo $menus->title ?>
+			</a>
+		</li>
+	<?php endforeach; ?>
   </ul>
           
