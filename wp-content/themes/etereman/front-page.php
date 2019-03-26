@@ -37,7 +37,7 @@
 <div class="row services-list">
 	<div class="card">
 		<div class="col s12 m12 l6 services-info">
-			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-1.jpg)">
+			<div class="services-info-details lazyload" data-src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)">
 				<div class="service-info-details-text">
 					<span>vehicle owners</span>
 				</div>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="col s12 m12 l6 services-info">
-			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-2.jpg)">
+			<div class="services-info-details lazyload" data-src="<?php echo get_template_directory_uri() ?>/img/card-2.jpg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)">
 				<div class="service-info-details-text">
 					<span>PRODUCT SUPPORT</span>
 				</div>
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div class="col s12 m12 l6 services-info">
-			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-3.jpg)">
+			<div class="services-info-details lazyload" data-src="<?php echo get_template_directory_uri() ?>/img/card-3.jpg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)">
 				<div class="service-info-details-text">
 					<span>buyete</span>
 				</div>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<div class="col s12 m12 l6 services-info">
-			<div class="services-info-details" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-4.jpg)">
+			<div class="services-info-details lazyload" data-src="<?php echo get_template_directory_uri() ?>/img/card-4.jpg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)">
 				<div class="service-info-details-text">
 					<span>careers</span>
 				</div>

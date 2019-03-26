@@ -1,4 +1,6 @@
 $(function(){
+    $('div.lazyload').lazyload();
+
     $('.sidenav').sidenav({
         menuWidth: 300,
         closeOnClick: true,
@@ -8,7 +10,12 @@ $(function(){
     // var autoplay = true;
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
-        indicators: true
+        indicators: true,
+        onCycleTo: function(element) {
+            var image = $(element).data('src');
+            $(element).css('background-image', 'url('+image+')');
+            $(element).removeAttr('data-src');
+        }
     });
     setInterval(function(){
             $('.carousel.carousel-slider').carousel('next');
