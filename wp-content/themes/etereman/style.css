@@ -20,6 +20,10 @@ html * {
     margin-right: 2em;
 }
 
+.margin-r-1 {
+    margin-right: 1em;
+}
+
 .margin-l-2 {
     margin-left: 2em;
 }
@@ -78,10 +82,20 @@ html * {
 .sticky-top {
     position: sticky;
     -webkit-position: sticky;
-    z-index: 1020;
+    z-index: 1022;
     top: 0;
 }
 
+.position-relative {
+    position: relative;
+}
+
+
+/* divider */
+.divider {
+    background: #a29f9f;
+    margin-bottom: 20px;
+}
 
 /* LOGO */
 .etereman-logo {
@@ -162,7 +176,7 @@ html * {
 }
 
 /* nav-items links */
-.nav-center li > a {
+.nav-center li > a, .sidenav li > a {
     color: #002679;
     font-family: 'Open Sans', 'sans-serif';
     text-transform: uppercase;
@@ -173,6 +187,7 @@ html * {
 li > a.active {
     color: #f92c2c !important   ;
 }
+
 
 /* carousel  */
 .carousel {
@@ -669,6 +684,168 @@ li > a.active {
     padding: 1em;
 }
 
+/* tabs */
+.tabs-container {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.tabs-row {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.tabs {
+    display: flex;
+    width: 80%;
+    background: #f5f5f5;
+}
+
+.tabs .tab a {
+    color: rgba(0, 38, 121, 0.7) !important;
+    text-transform: initial;
+    font-size: 20px;
+}
+
+.tabs li > a.active {
+    color: #002679 !important;
+} 
+
+.tabs .indicator {
+    background: #002679 !important;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background: rgba(191, 178, 246, 0.2) !important;
+ }
+
+.tab-careers-info-video-container {
+    height: 100vh;
+}
+
+.tab-careers-info-video-container iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-list-container {
+    position: relative;
+    background: #f5f5f5;
+}
+
+.tab-content {
+    background: #f5f5f5;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.tab-content-info-left {
+    padding: 2em 1em 2em 2em !important;
+}
+
+.tab-content-info-left-news-image {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 50vh;
+}
+
+.tab-content-info-left-btn {
+    width: 20%;
+}
+
+.tab-content-info-right {
+    padding: 2em 2em 2em 1em !important;
+}
+
+.tab-content-info-right-details {
+    background: #e6e6e6;
+    padding: 0 2em 2em 2em;
+}
+
+.tab-content-info-right-image {
+    height: 15vh;
+    width: 100%;
+}
+
+.tab-content-info-right-text span:nth-child(1) {
+    font-size: 18px;
+}
+
+.tab-content-info-right-text span:nth-child(2) {
+    font-size: 18px;
+}
+
+.tab-content-info-right-details > .divider:last-child {
+    display: none;
+}
+
+.tab-careers-top-section {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.tab-careers-bottom-section {
+    padding: 2em;
+}
+
+.tab-careers-content-left {
+    padding: 2em !important;
+}
+
+.tab-careers-content-left-image {
+    width: 250px;
+    height: 250px;
+}
+
+.tab-careers-content-right {
+    padding: 2em !important;
+}
+
+.tab-careers-search-job {
+    padding: 2em !important;
+    background: #cecccc;
+}
+
+.tab-careers-search-job-select {
+    margin-right: 4em !important;
+}
+
+.tab-careers-search-job-input i.prefix {
+    right: 0 !important;
+}
+
+.tab-careers-search-job-input input {
+    margin-left: 0 !important;
+} 
+
+.tab-careers-search-job-input label {
+    margin-left: 0 !important;
+} 
+
+.need-help {
+    border-radius: 100%;
+    border: none;
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    bottom: 10%;
+    position: absolute;
+    right: 1%;
+}
+
+.need-help i {
+    font-size: 25px;
+}
+
+.need-help span {
+    font-size: 10px;
+}
+
 /* footer */
 footer {
     position: relative;
@@ -879,6 +1056,34 @@ footer {
 }
 
 @media (max-width: 575.98px) { 
+    .page-support-info-top-text h1 {
+        font-size: 2.5em;
+    }
+
+    .page-support-info-top-text span {
+        font-size: 16px;
+    }
+
+    .page-support-content-left-header {
+        font-size: 25px;
+    }
+
+    .page-support-content-left-form {
+        width: 100%;
+    }
+
+    .page-support-content-left-container {
+        padding-left: 2em !important;
+    }
+
+    .page-support-content-right-container {
+        display: none !important;
+    }
+
+    .contact-info-top-text h1 {
+        font-size: 25px;
+    }
+
     .message-icon {
         height: 70px;
         width: 70px;
@@ -902,13 +1107,17 @@ footer {
     }
 
     .carousel .indicators {
-        bottom: 2em;
+        bottom: 3em;
     }
 
     .services-list {
         height: 100vh;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2em !important;
     }
 
     .service-info-details-text {

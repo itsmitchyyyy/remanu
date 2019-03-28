@@ -45,7 +45,7 @@
 <div class="sticky-top">
 	<nav>
 	    <div class="nav-wrapper white-bg">
-	      <a href="#!" class="brand-logo">
+	      <a href="<?php echo home_url() ?>" class="brand-logo">
 			  <img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="Etereman" class="etereman-logo">
 		  </a>
 	      <a href="#" data-target="mobile-demo" class="sidenav-trigger right text-black"><i class="material-icons">menu</i></a>

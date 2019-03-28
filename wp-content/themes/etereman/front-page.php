@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php include('misc/carousel.php') ?>
-<div class="container main-cont">
+<div class="container main-cont position-relative">
 	<div class="message-icon" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/message.png)"></div>
 	<div class="row red-bg info-top">
 		<div class="col s4 info-image">

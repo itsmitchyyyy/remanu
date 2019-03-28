@@ -2,14 +2,14 @@
 <?php get_header(); ?>
 <div class="d-flex flex-column">
     <div class="d-flex justify-content-center align-items-center page-support-info-top lazyload" 
-        style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif" data-src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg">
+        style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)" data-src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg">
         <div class="page-support-info-top-text d-flex justify-content-center align-items-center">
             <h1>Product Support</h1>
             <span>Above and Beyond Warranty Claims</span>
         </div>
     </div>
     <div class="row page-content-container">
-        <div class="col s8 page-support-content-left-container white-bg">
+        <div class="col s12 m8 page-support-content-left-container white-bg">
             <div class="page-support-content-left">
                 <div class="d-flex flex-column">
                     <h3 class="text-uppercase page-support-content-left-header">The best warranty in the business</h3>

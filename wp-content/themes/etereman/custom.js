@@ -1,4 +1,8 @@
 $(function(){
+    $('.tabs').tabs();
+
+    $('select').formSelect();
+
     $('div.lazyload').lazyload();
 
     $('.sidenav').sidenav({

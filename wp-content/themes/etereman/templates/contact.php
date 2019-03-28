@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row contact-content-container">
-        <div class="col s8 contact-content-left-container white-bg">
+        <div class="col m8 s12 contact-content-left-container white-bg">
             <div class="contact-content-left">
                 <div class="d-flex flex-column">
                     <h3 class="text-uppercase contact-content-left-header">Reach us for answers</h3>
@@ -24,19 +24,19 @@
                         <h4 class="text-uppercase contact-content-left-form-header">send us a message</h4>
                         <form>
                             <div class="row">
-                                <div class="col s6 input-field">
+                                <div class="col m6 s12 input-field">
                                     <label for="name">Name</label>
                                     <input type="text" id="name">
                                 </div>
-                                <div class="col s6 input-field">
+                                <div class="col m6 s12 input-field">
                                     <label for="company">Company (optional)</label>
                                     <input type="text" id="company">
                                 </div>
-                                <div class="col s6 input-field">
+                                <div class="col m6 s12 input-field">
                                     <label for="email">Email</label>
                                     <input type="email" id="email">
                                 </div>
-                                <div class="col s6 input-field">
+                                <div class="col m6 s12 input-field">
                                     <label for="phone">Telephone (optional)</label>
                                     <input type="text" id="phone">
                                 </div>
@@ -69,7 +69,7 @@
                                 </span>
                             </div>
                             <div class="flex-grow-1 justify-content-center">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="" height="100" width="100">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
                             </div>
                         </div>
                         <span>David Park - AAMCO Front Royal</span>
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s4 contact-content-right-container">
+        <div class="col m4 s12 contact-content-right-container">
             <div class="d-flex flex-column contact-content-right">
                 <button class="contact-content-right-message-btn">
                     <i class="fa fa-envelope"></i>
@@ -87,7 +87,7 @@
                     <h3 class="contact-content-right-header">ETE Reman's Remarkable Customer Loyalty Team</h3>
                     <?php for($i = 0; $i < 3; $i++): ?>
                         <div class="d-flex flex-column justify-content-center align-items-center margin-t-2">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="" height="100" width="100">
+                            <img src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
                             <span>Brud Graham</span>
                             <span>Product Support Spacialist</span>
                             <span>sample@gmail.com</span>
