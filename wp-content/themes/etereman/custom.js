@@ -1,4 +1,12 @@
 $(function(){
+    $('#need-help').click(function(){
+        $('.chat-box-container').toggleClass('active');
+    });
+
+    $('.chat-box-icon-minimize').click(function(){
+        $('.chat-box-container').removeClass('active');
+    });
+
     $('.tabs').tabs();
 
     $('select').formSelect();

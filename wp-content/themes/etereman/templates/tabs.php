@@ -1,13 +1,13 @@
 <?php /* Template Name: Tabs */ ?>
 <?php get_header() ?>
-<div class="d-flex flex-column">
+<div class="d-flex flex-column position-relative">
     <div class="tab-careers-info-video-container ">
             <iframe src="https://www.youtube.com/embed/PHJC4jMndgE?wmode=transparent" frameborder="0"></iframe>
     </div>
     <div class="tabs-container">
         <div class="row tabs-row">
             <div class="col s12 tab-list-container">
-                <button class="need-help">
+                <button class="need-help" id="need-help">
                     <i class="fa fa-envelope"></i>
                     <span>Need Help?</span>
                 </button>
@@ -31,7 +31,7 @@
             </div>
         <div id="news" class="tab-content col s12">
             <div class="row">
-                <div class="col s8 tab-content-info-left">
+                <div class="col m8 s12 tab-content-info-left">
                     <h4 class="text-uppercase">ete reman news</h4>
                     <div class="tab-content-info-left-news-image" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)"></div>
                     <div class="d-flex flex-column">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s4 tab-content-info-right">
+                <div class="col m4 s12 tab-content-info-right">
                     <div class="d-flex flex-column tab-content-info-right-details">
                         <h4 class="text-uppercase">news & updates</h4>
                         <?php for($i = 0; $i < 4; $i++): ?>
@@ -163,5 +163,6 @@
         </div>
     </div>
     </div>
+    <?php include(get_template_directory().'/misc/chat-box.php') ?>
 </div>
 <?php get_footer() ?>

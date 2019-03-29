@@ -73,12 +73,13 @@
                 </span>
             </div>
             <div class="page-support-content-right-message">
-                <button class="page-support-content-right-message-btn">
+                <button class="page-support-content-right-message-btn" id="need-help">
                     <i class="fa fa-envelope"></i>
                     <span>Need Help?</span>
                 </button>
             </div>
         </div>
     </div>
+    <?php include(get_template_directory().'/misc/chat-box.php') ?>
 </div>
 <?php get_footer() ?>

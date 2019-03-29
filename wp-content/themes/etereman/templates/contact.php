@@ -1,6 +1,6 @@
 <?php /* Template Name: Contact */ ?>
 <?php get_header(); ?>
-<div class="d-flex flex-column">
+<div class="d-flex flex-column position-relative">
     <div class="d-flex justify-content-center align-items-center contact-info-top lazyload" 
         style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif" data-src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg">
         <div class="contact-info-top-text d-flex justify-content-center align-items-center">
@@ -79,7 +79,7 @@
         </div>
         <div class="col m4 s12 contact-content-right-container">
             <div class="d-flex flex-column contact-content-right">
-                <button class="contact-content-right-message-btn">
+                <button class="contact-content-right-message-btn" id="need-help">
                     <i class="fa fa-envelope"></i>
                     <span>Need Help?</span>
                 </button>
@@ -97,5 +97,6 @@
             </div>
         </div>
     </div>
+    <?php include(get_template_directory().'/misc/chat-box.php') ?>
 </div>
 <?php get_footer() ?>

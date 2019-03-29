@@ -846,6 +846,36 @@ li > a.active {
     font-size: 10px;
 }
 
+/* chat box */
+.chat-box-container {
+    /* display: none; */
+    background-color: #fff;
+    position: fixed;
+    height: 0px;
+    right: 10%;
+    bottom: 0;
+    z-index: 1023;
+    width: 350px;
+    border-radius: 10px 10px 0 0 !important;
+    transition: .3s ease-in-out !important;
+}
+
+.chat-box-container.active {
+    height: 450px !important;
+}
+
+.chat-box-helper {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1em;
+    color: #fff;
+    background: #002679;
+}
+
+.chat-box-icon-minimize {
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /* footer */
 footer {
     position: relative;
@@ -1056,6 +1086,22 @@ footer {
 }
 
 @media (max-width: 575.98px) { 
+    .tabs .tab a {
+        font-size: 15px;
+    }
+    
+    .tabs {
+        width: 100%;
+    }
+
+    .need-help {
+        display: none;
+    }
+    .tabs-row {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
     .page-support-info-top-text h1 {
         font-size: 2.5em;
     }
