@@ -1,5 +1,8 @@
-<footer class="default-bg">
+    <footer class="default-bg">
     <div class="footer-logo" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/etereman.png)"></div>
+    <div class="chat-button" id="need-help">
+        <i class="fa fa-comment"></i>
+    </div>
     <div class="footer-button" id="scrollUp">
         <i class="fa fa-angle-up"></i>
     </div>

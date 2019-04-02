@@ -169,10 +169,36 @@ html * {
     background: #ca2730;
 }
 
-/* nav-items */
+/* nav-items-center */
 .nav-center {
     display: flex;
     justify-content: center;
+}
+
+/* nav-items-start */
+.nav-start {
+    display: flex;
+    justify-content: start;
+}
+
+.justify-content-start {
+    justify-content: start !important;
+}
+
+.searchbar {
+    margin-left: auto !important;
+}
+
+.searchbar i.prefix {
+    right: 0 !important;
+}
+
+.searchbar input {
+    margin-left: 0 !important;
+}
+
+.searchbar label {
+    margin-left: 0 !important;
 }
 
 /* nav-items links */
@@ -186,6 +212,16 @@ html * {
 
 li > a.active {
     color: #f92c2c !important   ;
+}
+
+.show-on-mobile {
+    position: absolute;
+    flex-flow: column;
+    line-height: 1.5em;
+    top: 10%;
+    right: 32.5%;
+    text-align: center;
+    display: none !important;
 }
 
 
@@ -612,7 +648,7 @@ li > a.active {
 }
 
 .contact-content-left-header {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .contact-content-left-form {
@@ -631,6 +667,12 @@ li > a.active {
     position: relative;
 }
 
+.contact-content-blank-image {
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,.1);
+}
+
 .contact-content-right {
     padding: 5em 2em 2em 2em;
     background: #e7e7e7;
@@ -638,7 +680,7 @@ li > a.active {
 }
 
 .contact-content-right-header {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .contact-content-right-header-image {
@@ -848,7 +890,7 @@ li > a.active {
 
 /* chat box */
 .chat-box-container {
-    /* display: none; */
+    border: none;
     background-color: #fff;
     position: fixed;
     height: 0px;
@@ -862,6 +904,7 @@ li > a.active {
 
 .chat-box-container.active {
     height: 450px !important;
+    border: 1px solid #ccc;
 }
 
 .chat-box-helper {
@@ -881,18 +924,38 @@ footer {
     position: relative;
 }
 
-.footer-button {
-    position: absolute;
-    border: 1px solid #ffffff;
+.chat-button {
+    display: flex;
+    position: fixed;
+    border: 1px solid rgba(0,0,0,.5);
     right: 5%;
     padding: .5em 1em .5em 1em;
     color: #ffffff;
-    top: 15%;
+    bottom: 3%;
+    z-index: 2023;
     cursor: pointer;
+    background: rgba(0,0,0,0.4);
+} 
+
+.chat-button i {
+    font-size: 1.5em;
+}
+
+.footer-button {
+    position: fixed;
+    border: 1px solid rgba(0,0,0,.5);
+    right: 1%;
+    padding: .5em 1em .5em 1em;
+    color: #ffffff;
+    bottom: 3%;
+    z-index: 2023;
+    cursor: pointer;
+    background: rgba(0,0,0,0.4);
+    display: flex;
 }
 
 .footer-button i {
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 .footer-logo {
@@ -1016,9 +1079,20 @@ footer {
     .feedback-card {
         max-width: 250px;
     }
+
+    .show-on-mobile {
+        display: flex !important;
+        flex-direction: row;
+        top: 32.5%;
+        right: 35%;
+    }
 }
 
 @media (max-width: 991.98px) { 
+    .chat-button {
+        right: 7.5%;
+    }
+
     br {
         display: none;
     }
@@ -1083,9 +1157,89 @@ footer {
     .feedback-card {
         margin: 1em 1em 2em 1em;
     }
+
+    .show-on-mobile {
+        display: flex !important;
+        flex-direction: row;
+        top: 32.5%;
+    }
 }
 
 @media (max-width: 575.98px) { 
+    .chat-box-container {
+        right: 15%; 
+    }
+
+    .carousel {
+        height: 70vh !important;
+    }
+
+    .tab-content-info-right-image {
+        height: 20vh;
+    }
+
+    .tab-content-info-right-text span:nth-child(1), .tab-content-info-right-text span:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .show-on-mobile {
+        display: flex !important;
+        flex-direction: column;
+        top: 10%;
+        right: 32.5%;
+    }
+
+    .show-on-mobile span:first-child {
+        margin-right: 0 !important;
+    }
+
+    .tab-careers-info-video-container {
+        height: 60vh;
+    }
+
+    .page-support-info-top {
+        height: 60vh;
+    }
+    
+    nav .brand-logo {
+        left: 55%;
+    }
+
+    .chat-button {
+        right: 2%;
+        bottom: 4%;
+    }
+
+    .chat-button i {
+        font-size: 1em;
+    }
+    
+    .footer-button {
+        right: 2%;
+        bottom: 10%;
+    }
+
+    .contact-content-right-container {
+        margin-top: 0em;
+        padding-right: 2em !important;
+    }
+
+    .contact-content-testimonial-container {
+        flex-direction: column-reverse !important;
+    }
+    
+    .contact-content-testimonial {
+        width: 100%;
+    }
+
+    .contact-info-top {
+        height: 60vh;
+    }
+
+    .contact-content-left-container {
+        padding-left: 2em !important;
+    }
+
     .tabs .tab a {
         font-size: 15px;
     }
@@ -1153,11 +1307,11 @@ footer {
     }
 
     .carousel .indicators {
-        bottom: 3em;
+        bottom: 3.5em;
     }
 
     .services-list {
-        height: 100vh;
+        height: 85vh;
         margin-left: 0;
         margin-right: 0;
     }

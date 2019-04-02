@@ -58,7 +58,7 @@
                     </div>
                     <h3 class="contact-content-left-header">ETE REMAN TESTIMONIALS</h3>
                     <div class="d-flex flex-column">
-                        <div class="d-flex flex-wrap">
+                        <div class="d-flex flex-wrap contact-content-testimonial-container">
                             <div class="flex-grow-1 contact-content-testimonial justify-content-center">
                                 <span>
                                     <q>
@@ -69,7 +69,7 @@
                                 </span>
                             </div>
                             <div class="flex-grow-1 justify-content-center">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
+                                <img class="lazyload contact-content-blank-image" data-src="<?php echo get_template_directory_uri() ?>/img/blank-avatar.png" src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
                             </div>
                         </div>
                         <span>David Park - AAMCO Front Royal</span>
@@ -79,15 +79,15 @@
         </div>
         <div class="col m4 s12 contact-content-right-container">
             <div class="d-flex flex-column contact-content-right">
-                <button class="contact-content-right-message-btn" id="need-help">
+                <!-- <button class="contact-content-right-message-btn" id="need-help">
                     <i class="fa fa-envelope"></i>
                     <span>Need Help?</span>
-                </button>
+                </button> -->
                 <div class="d-flex flex-column">
                     <h3 class="contact-content-right-header">ETE Reman's Remarkable Customer Loyalty Team</h3>
                     <?php for($i = 0; $i < 3; $i++): ?>
                         <div class="d-flex flex-column justify-content-center align-items-center margin-t-2">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
+                            <img class="lazyload contact-content-blank-image" data-src="<?php echo get_template_directory_uri() ?>/img/blank-avatar.png" src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="" height="100" width="100">
                             <span>Brud Graham</span>
                             <span>Product Support Spacialist</span>
                             <span>sample@gmail.com</span>

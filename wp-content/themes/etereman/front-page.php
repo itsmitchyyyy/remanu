@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php include('misc/carousel.php') ?>
 <div class="container main-cont position-relative">
-	<div class="message-icon" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/message.png)"></div>
+	<!-- <div class="message-icon" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/message.png)"></div> -->
 	<div class="row red-bg info-top">
 		<div class="col s4 info-image">
 			<img src="<?php echo get_template_directory_uri() ?>/img/etereman1985.png" alt="">
@@ -121,5 +121,6 @@
 			</div>
 		</div>
 	</div>
+    <?php include(get_template_directory().'/misc/chat-box.php') ?>
 </div>
 <?php get_footer(); ?>

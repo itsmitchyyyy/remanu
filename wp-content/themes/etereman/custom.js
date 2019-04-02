@@ -12,6 +12,7 @@ $(function(){
     $('select').formSelect();
 
     $('div.lazyload').lazyload();
+    $('img.lazyload').lazyload();
 
     $('.sidenav').sidenav({
         menuWidth: 300,

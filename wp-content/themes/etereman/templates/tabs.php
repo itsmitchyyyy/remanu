@@ -7,10 +7,10 @@
     <div class="tabs-container">
         <div class="row tabs-row">
             <div class="col s12 tab-list-container">
-                <button class="need-help" id="need-help">
+                <!-- <button class="need-help" id="need-help">
                     <i class="fa fa-envelope"></i>
                     <span>Need Help?</span>
-                </button>
+                </button> -->
                 <ul class="tabs">
                     <li class="tab col s4">
                         <a href="#news" class="active">News</a>
@@ -88,7 +88,7 @@
                     <div class="col tab-careers-content-left">
                         <img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="image" class="tab-careers-content-left-image">
                     </div>
-                    <div class="col s8 tab-careers-content-right">
+                    <div class="col m8 s12 tab-careers-content-right">
                         <div class="d-flex flex-column">
                             <h4 class="text-uppercase">interested in joining our team?</h4>
                             <span>Visit our careers page to learn more about our hiring departments</span>
@@ -110,7 +110,7 @@
                         <small>Begin the application process by checking out our current openings.</small>
                     </div>
                     <div class="row">
-                        <div class="col input-field s3 tab-careers-search-job-select">
+                        <div class="col input-field m3 s12 tab-careers-search-job-select">
                             <select>
                                 <option value="" disabled selected>Job Function</option>
                                 <option value="job">job</option>
@@ -118,7 +118,7 @@
                                 <option value="job">job</option>
                             </select>
                         </div>
-                        <div class="col input-field s3 tab-careers-search-job-select">
+                        <div class="col input-field m3 s12 tab-careers-search-job-select">
                             <select>
                                 <option value="" disabled selected>Location</option>
                                 <option value="location">location</option>
@@ -126,7 +126,7 @@
                                 <option value="location">location</option>
                             </select>
                         </div>
-                        <div class="col input-field s3 tab-careers-search-job-input">
+                        <div class="col input-field m3 s12 tab-careers-search-job-input">
                             <i class="fa fa-search prefix"></i>
                             <input type="text" id="keyword">
                             <label for="keyword">Keyword</label>

@@ -21,10 +21,15 @@
 	<div class="nav-wrapper">
 		<div class="container" style="height: inherit">
 			<div class="row" style="height: 100%">
-				<div class="col s6 headline-text">
-					<span>Have any questions? <b>1-800-934-9479</b>  |  installer locator</span>
+				<div class="col s8 headline-text">
+					<span>
+						Have any questions? 
+						<b>1-800-934-9479</b>  |
+					<a href="#">installer locator</a> |
+					<a href="#">car care centers</a>
+					</span>
 				</div>
-				<div class="col s6 headline-icons">
+				<div class="col s4 headline-icons">
 					<span>
 						<i class="fa fa-envelope"></i>
 					</span>
@@ -48,8 +53,12 @@
 	      <a href="<?php echo home_url() ?>" class="brand-logo">
 			  <img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="Etereman" class="etereman-logo">
 		  </a>
-	      <a href="#" data-target="mobile-demo" class="sidenav-trigger right text-black"><i class="material-icons">menu</i></a>
-		  <ul class="nav-center hide-on-med-and-down">
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger right text-black"><i class="material-icons">menu</i></a>
+				<div class="nav-center text-black show-on-mobile">
+					<span class="margin-r-1">Have any questions?</span> 
+					<span><b>1-800-934-9479</b></span>
+					</div>
+		  <ul class="nav-center justify-content-start container hide-on-med-and-down">
 				<?php foreach($menu as $menus): ?>
 					<li>
 						<?php if(is_page($menus->title)) : ?>
@@ -61,6 +70,11 @@
 						</a>
 					</li>
 				<?php endforeach; ?>
+				<!-- <div class="searchbar input-field">
+						<i class="fa fa-search prefix"></i>
+						<input type="text" id="search">
+						<label for="search">Search Here...</label>
+					</div> -->
 	      </ul>
 	    </div>
 	</nav>
@@ -78,5 +92,11 @@
 			</a>
 		</li>
 	<?php endforeach; ?>
+		<li>
+			<a href="#">installer locator</a>
+		</li>
+		<li>
+			<a href="#">car care centers</a>
+		</li>
   </ul>
           
