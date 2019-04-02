@@ -1166,6 +1166,14 @@ footer {
 }
 
 @media (max-width: 575.98px) { 
+    .main-cont {
+        width: 100% !important;
+    }
+
+    .tab-content-info-right {
+        padding: 2em !important;
+    }
+
     .chat-box-container {
         right: 15%; 
     }
