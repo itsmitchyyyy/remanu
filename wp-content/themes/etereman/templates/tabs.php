@@ -2,7 +2,7 @@
 <?php get_header() ?>
 <div class="d-flex flex-column position-relative">
     <div class="tab-careers-info-video-container ">
-            <iframe src="https://www.youtube.com/embed/PHJC4jMndgE?wmode=transparent" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/w4mfZZvx7Os" frameborder="0"></iframe>
     </div>
     <div class="tabs-container">
         <div class="row tabs-row">
@@ -79,7 +79,20 @@
                 </div>
             </div>
         </div>
-        <div id="philosophy" class="tab-content col s12">Philosophy</div>
+        <div id="philosophy" class="tab-content col s12">
+            <div class="row">
+                <div class="col m8 s12 tab-content-info-left">
+                   <div class="d-flex flex-column">
+                        <h4 class="text-uppercase philosophy-left-header">ETE REMAN PHILOSOPHY</h4>
+                        <span>Providing an Exceptional Transmission Experience</span>
+                        <div class="philosophy-left-image margin-t-2" style="background-image: url(http://localhost/remanu/wp-content/themes/etereman/img/image-loader.gif)"></div>
+                   </div>
+                </div>
+                <div class="col m4 s12 tab-content-info-right">
+
+                </div>
+            </div>
+        </div>
         <div id="people" class="tab-content col s12">People</div>
         <div id="plant-tour" class="tab-content col s12">Plant Tour</div>
         <div id="employment" class="tab-content col s12">
