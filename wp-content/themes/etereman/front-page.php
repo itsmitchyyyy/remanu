@@ -81,7 +81,7 @@
 </div>
 <div class="row feedback-info">
 	<div class="card card-container" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-6.png)">
-		<img class="feedback-logo" src="<?php echo get_template_directory_uri() ?>/img/card-5.png" alt="">
+		<img class="feedback-logo" src="<?php echo get_template_directory_uri() ?>/img/home-trans.png" alt="">
 		<div class="feedback-header">
 			<div class="feedback-heading">
 				<span>what our customers saying</span>

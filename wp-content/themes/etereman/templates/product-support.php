@@ -61,7 +61,7 @@
         </div>
         <div class="col s4 page-support-content-right-container">
             <div class="d-flex flex-column page-support-content-right">
-                <div class="page-support-content-right-header-image" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-5.png)"></div>
+                <div class="page-support-content-right-header-image" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/home-trans.png)"></div>
                 <h3 class="page-support-content-right-header">Warranty Questions?</h3>
                 <span>
                     Want the nitty gritty warranty details? Have questions about our hassle-free warranty?

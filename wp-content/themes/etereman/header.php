@@ -70,11 +70,10 @@
 						</a>
 					</li>
 				<?php endforeach; ?>
-				<!-- <div class="searchbar input-field">
-						<i class="fa fa-search prefix"></i>
-						<input type="text" id="search">
-						<label for="search">Search Here...</label>
-					</div> -->
+				<div class="searchbar">
+						<input type="text" id="search" placeholder="Search Here..">
+						<span class="fa fa-search"></span>
+					</div>
 	      </ul>
 	    </div>
 	</nav>

@@ -83,13 +83,85 @@
             <div class="row">
                 <div class="col m8 s12 tab-content-info-left">
                    <div class="d-flex flex-column">
-                        <h4 class="text-uppercase philosophy-left-header">ETE REMAN PHILOSOPHY</h4>
-                        <span>Providing an Exceptional Transmission Experience</span>
-                        <div class="philosophy-left-image margin-t-2" style="background-image: url(http://localhost/remanu/wp-content/themes/etereman/img/image-loader.gif)"></div>
-                   </div>
+                        <div class="margin-b-5 d-flex flex-column">
+                            <h4 class="text-uppercase philosophy-left-header">ETE REMAN PHILOSOPHY</h4>
+                            <span>Providing an Exceptional Transmission Experience</span>
+                            <div class="philosophy-left-image margin-t-2" style="background-image: url(http://localhost/remanu/wp-content/themes/etereman/img/image-loader.gif)"></div>
+                            <span class="margin-t-1">
+                                Remarkable Customer Service - Everyday the ETE REMAN team is focused on one
+                                mission: To deliver remarkable customer service unmatched by others. We are proud to
+                                have a team of bright professionals who are dedicated to this mission. A team dedicated to
+                                making your ETE REMAN experience more than great. Remarkable
+                            </span>
+                            <span class="margin-t-1">
+                                True Partnership - Sharing is one of the basic lessons we all were taught in grade school.
+                                This virtue is just as important today in our business. We treat our business relationships like
+                                partnerships by sharing both the joys and pains of business with our customers.
+                                Of course, we prefer joy and hope you do too.
+                            </span>
+                            <span class="margin-t-1">
+                                Tremendous Quality - Quality begins, well, at the beginning. Research and Development
+                                engineers analyze all transmissions and then design replacement parts which often improve
+                                upon the quality of the original component. Each part and each process is designed to
+                                create OE+ &trade; quality transmissions. But, the true scientists at ETE REMAN do not stop
+                                there; we keep looking at our creations, at our processes, to find ways to make
+                                transmissions even better.
+                                Not good, not greate. Tremendous.
+                            </span>
+                        </div>
+                        <div class="margin-b-5 d-flex flex-column">
+                            <h4 class="text-uppercase philosophy-left-header">ETE REMAN'S ENGINE & TRANMISSION EXCHANGE</h4>
+                            <span>Your Full Service Car Care Professionals</span>
+                            <div class="philosophy-left-image margin-t-2" style="background-image: url(http://localhost/remanu/wp-content/themes/etereman/img/image-loader.gif)"></div>
+                            <span class="margin-t-1">
+                                Southeastern Wisconsin Auto Service and Repair
+                            </span>
+                            <span class="margin-t-1">
+                                Engine and Transmission Exchange provides all of its customers with high-quality engine
+                                repair and service at reasonable prices. We specialize in complete engine and transmission
+                                repair, and we remanufacture our own engines and tranmissions to ensure the highest
+                                quality possible. All of our transmissions come with a 3 year / 100,000 miles warranty.. Our
+                                expert technicians know all of the latest techniques and use state-of-the-art tools.
+                            </span>
+                            <span class="margin-t-1">
+                                Engine and tranmission Exchange Provides Complete Car Care!
+                            </span>
+                            <ul class="list-of-benefits">
+                                <li>Brakes & Brake Repair</li>
+                                <li>Mufflers & Exhaust Service</li>
+                                <li>Tune-ups & Preventive Maintenance</li>
+                                <li>Alignments, Steering & Suspension</li>
+                                <li>Climate Control</li>
+                                <li>Engine Cooling Systems</li>
+                                <li>Fleet Service Brakes & Brake Repair</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col m4 s12 tab-content-info-right">
-
+                    <div class="d-flex flex-column tab-content-info-right-details">
+                        <h4 class="text-uppercase">testimonials</h4>
+                        <div class="d-flex flex-column">
+                            <?php for($i = 0; $i < 5; $i++): ?>
+                            <div class="margin-b-2 margin-t-2 d-flex flex-column">
+                                <span>
+                                    <q>ETE has always been very friendly when we call and more importantly
+                                        they are prompt with their quotes and very knowledgeable about their products.
+                                        On time delivery, competitive, pricing and quality are important for our center;
+                                        ETE meet all three of these requirements everytime. We have only ever had one bad unit,
+                                        and when we did, the warranty was handled VERY FAST and VERY professionally.
+                                    </q>
+                                </span>
+                                <div class="d-flex flex-row margin-t-2">
+                                    <img class="lazyload contact-content-blank-image" data-src="<?php echo get_template_directory_uri() ?>/img/blank-avatar.png" src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif"
+                                     alt="avatar" height="50" width="50">
+                                     <span class="margin-l-1">David Park - AAMCO Front Royal</span>
+                                </div>
+                            </div>
+                            <?php endfor; ?>
+                        </div>
+                        <button class="btn waves-light waves-effect default-bg" style="width:50%">Read More</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -48,6 +48,10 @@ html * {
     margin-bottom: 2em;
 }
 
+.margin-b-5 {
+    margin-bottom: 5em;
+}
+
 .margin-x-2 {
     margin-right: 2em;
     margin-left: 2em;
@@ -75,6 +79,10 @@ html * {
 
 .flex-column {
     flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
 }
 
 .flex-wrap {
@@ -210,18 +218,31 @@ html * {
 
 .searchbar {
     margin-left: auto !important;
-}
-
-.searchbar i.prefix {
-    right: 0 !important;
+    display: flex;
+    align-items: center;
 }
 
 .searchbar input {
-    margin-left: 0 !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    box-shadow: none !important;
+    padding: 0 7px 0 7px !important;
+    border-right: none !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    margin: 0 !important;
 }
 
-.searchbar label {
-    margin-left: 0 !important;
+.searchbar span {
+    padding: 0.5em;
+    color: #000000;
+    font-size: 16px;
+    height: 3.15rem;
+    display: flex;
+    align-items: center;
+    border-left: none !important;
+    border: 1px solid rgba(0,0,0,.1);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* nav-items links */
@@ -451,7 +472,7 @@ li > a.active {
     position: absolute;
     height: 250px;
     left: 40%;
-    top: -30%;
+    top: -20%;
     width: 250px;
 }
 
