@@ -13,7 +13,7 @@
             <div class="page-support-content-left">
                 <div class="d-flex flex-column">
                     <h3 class="text-uppercase page-support-content-left-header">The best warranty in the business</h3>
-                    <ul>
+                    <ul class="list-of-benefits">
                         <li>3 Years / Unlimited Mileage</li>
                         <li>Superior Technical Support</li>
                         <li>Immediate Replacements</li>

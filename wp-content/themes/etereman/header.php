@@ -98,5 +98,20 @@
 		<li>
 			<a href="#">car care centers</a>
 		</li>
+		<div class="divider margin-r-1 margin-l-1"></div>
+		<div class="headline-icons-mobile margin-t-1">
+			<span>
+				<i class="fa fa-envelope"></i>
+			</span>
+			<span>
+				<i class="fab fa-twitter"></i>
+			</span>
+			<span>
+				<i class="fab fa-facebook-f"></i>
+			</span>
+			<span>
+				<i class="fab fa-linkedin"></i>
+			</span>
+		</div>
   </ul>
           

@@ -60,16 +60,16 @@
                         <h4 class="text-uppercase">news & updates</h4>
                         <?php for($i = 0; $i < 4; $i++): ?>
                             <div class="row">
-                                <div class="col s6">
+                                <div class="col s12">
                                     <img src="<?php echo get_template_directory_uri() ?>/img/image-loader.gif" alt="image" class="tab-content-info-right-image">
                                 </div>
-                                <div class="col s6">
+                                <div class="col s12">
                                     <div class="d-flex flex-column tab-content-info-right-text">
-                                        <span>ETE REMAN Opens New Warehouse Locations</span>
-                                        <span class="margin-t-1 d-flex align-items-center ">
+                                        <span class="d-flex align-items-center ">
                                             <i class="fa fa-calendar-alt margin-r-1"></i>
                                             January 11, 2018
                                         </span>
+                                        <span class="margin-t-1">ETE REMAN Opens New Warehouse Locations</span>
                                     </div>
                                 </div>
                             </div>

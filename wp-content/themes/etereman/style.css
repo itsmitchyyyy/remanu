@@ -21,11 +21,15 @@ html * {
 }
 
 .margin-r-1 {
-    margin-right: 1em;
+    margin-right: 1em !important;
 }
 
 .margin-l-2 {
     margin-left: 2em;
+}
+
+.margin-l-1 {
+    margin-left: 1em !important;
 }
 
 .margin-t-1 {
@@ -51,6 +55,10 @@ html * {
 
 .h-100 {
     height: 100% !important;
+}
+
+.d-none {
+    display: none !important;
 }
 
 .d-flex {
@@ -102,7 +110,7 @@ html * {
     position: absolute;
     height: 100px;
     width: 100px;
-    left: .5em;
+    left: 2em;
     top: -.5em;
 }
 
@@ -136,6 +144,21 @@ html * {
 }
 
 .headline-icons span > i {
+    font-size: 20px;
+}
+
+.headline-icons-mobile {
+    display: flex;
+    flex-direction: row wrap;
+    padding: 0 32px;
+}
+
+.headline-icons-mobile span {
+    margin-right: 1em;  
+}
+
+
+.headline-icons-mobile span > i {
     font-size: 20px;
 }
 
@@ -510,6 +533,15 @@ li > a.active {
 }
 
 /* page support */
+.list-of-benefits {
+    display: list-item;
+    padding-left: 1em !important;;
+}
+
+.list-of-benefits li {
+    list-style-type: disc !important;
+}
+
 .page-support-info-top {
     background-repeat: no-repeat;
     background-size: 100% 100vh;
@@ -521,6 +553,10 @@ li > a.active {
     color: #ffffff;
     flex-direction: column;
     text-transform: uppercase;
+}
+
+.page-support-info-top-text h1 {
+    font-family: 'Gotham Bold';
 }
 
 .page-support-info-top-text span {
@@ -547,12 +583,12 @@ li > a.active {
 
 .page-support-content-left-header {
     font-size: 30px;
+    font-weight: bold !important;
 }
 
 .page-support-content-left-form {
     background: #e7e7e7;
     padding: 2em;
-    width: 50%;
 }
 
 .page-support-content-left-form-header {
@@ -574,13 +610,14 @@ li > a.active {
 
 .page-support-content-right-header {
     font-size: 20px;
+    font-weight: bold !important;
 }
 
 .page-support-content-right-header-image {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .page-support-content-right-message {
@@ -625,6 +662,10 @@ li > a.active {
     text-transform: uppercase;
 }
 
+.contact-info-top-text h1 {
+    font-family: 'Gotham Bold';
+}
+
 .contact-info-top-text span {
     text-transform: initial;
     font-size: 20px;
@@ -649,6 +690,7 @@ li > a.active {
 
 .contact-content-left-header {
     font-size: 25px;
+    font-weight: bold;
 }
 
 .contact-content-left-form {
@@ -674,13 +716,14 @@ li > a.active {
 }
 
 .contact-content-right {
-    padding: 5em 2em 2em 2em;
+    padding: 0em 2em 2em 2em;
     background: #e7e7e7;
     align-items: center;
 }
 
 .contact-content-right-header {
     font-size: 25px;
+    font-weight: bold;
 }
 
 .contact-content-right-header-image {
@@ -810,7 +853,7 @@ li > a.active {
 }
 
 .tab-content-info-right-text span:nth-child(1) {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .tab-content-info-right-text span:nth-child(2) {
@@ -925,33 +968,92 @@ footer {
 }
 
 .chat-button {
-    display: flex;
     position: fixed;
-    border: 1px solid rgba(0,0,0,.5);
-    right: 5%;
-    padding: .5em 1em .5em 1em;
-    color: #ffffff;
-    bottom: 3%;
-    z-index: 2023;
     cursor: pointer;
-    background: rgba(0,0,0,0.4);
+    transform-origin: center center;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    background-color: #ca2730;
+    right: 5%; 
+    bottom: 2%;
+    z-index: 1022;
 } 
 
-.chat-button i {
-    font-size: 1.5em;
+.chat-button-first-content {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    transition: transform 0.16s linear 0s, opacity 0.08s linear 0s;
+}
+
+.chat-button-first-content svg {
+    height: 25px;
+    width: 25px;
+    fill: #FFF;
+}
+
+.chat-button-first-content.active {
+    opacity: 0;
+}
+
+.chat-button-second-content {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 0;
+    transform: rotate(-90deg);
+    transition: transform 0.16s linear 0s, opacity 0.08s linear 0s;
+}
+
+.chat-button-second-content svg {
+    height: 14px;
+    width: 14px;
+    fill: #FFF;
+}
+
+.chat-button-second-content.active {
+    opacity: 1;
 }
 
 .footer-button {
+    border: 1px solid #FFF !important;
     position: fixed;
-    border: 1px solid rgba(0,0,0,.5);
-    right: 1%;
-    padding: .5em 1em .5em 1em;
-    color: #ffffff;
-    bottom: 3%;
-    z-index: 2023;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 18px;
     cursor: pointer;
-    background: rgba(0,0,0,0.4);
-    display: flex;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 100;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .footer-button i {
@@ -975,8 +1077,9 @@ footer {
 
 .content-container {    
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
     text-transform: uppercase;
     font-family: 'Gotham Book';
@@ -985,6 +1088,7 @@ footer {
 .footer-icons {
     display: flex;
     align-items: center;
+    margin-bottom: .5em;
 }
 
 .footer-icons span {
@@ -995,6 +1099,7 @@ footer {
     display: flex;
     align-items: center;
     font-size: 14px;
+    margin-bottom: .5em;
 }
 
 .footer-copyright {
@@ -1214,8 +1319,8 @@ footer {
     }
 
     .chat-button {
-        right: 2%;
-        bottom: 4%;
+        right: 1%;
+        bottom: 10%;
     }
 
     .chat-button i {
@@ -1224,7 +1329,7 @@ footer {
     
     .footer-button {
         right: 2%;
-        bottom: 10%;
+        bottom: 2%;
     }
 
     .contact-content-right-container {

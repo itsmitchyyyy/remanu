@@ -56,6 +56,7 @@
                             </div>
                         </form>
                     </div>
+                    <div class="divider margin-t-2"></div>
                     <h3 class="contact-content-left-header">ETE REMAN TESTIMONIALS</h3>
                     <div class="d-flex flex-column">
                         <div class="d-flex flex-wrap contact-content-testimonial-container">
