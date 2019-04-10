@@ -14,11 +14,24 @@ if (!function_exists('nav_setup')) {
 	}
 }
 
+
 function strip_gallery_from_content($content) {
 	$the_content = preg_replace('/\[gallery.*ids=.(.*).\]/', "", $content);
 	$the_content = apply_filters('the_content' , $the_content);
 	$the_content = str_replace(']]>', ']]&gt;', $the_content);
 	return $the_content;
+}
+
+function get_menu_items_by_registered_nav_slug($menu_slug) {
+	$menu_items = array();
+
+	if(($locations = get_nav_menu_locations()) && isset($locations[$menu_slug])) {
+		$menu = get_term($locations[$menu_slug]);
+
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+	}
+
+	return $menu_items;
 }
 
 function load_stylesheets() {

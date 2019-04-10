@@ -220,6 +220,7 @@ html * {
     margin-left: auto !important;
     display: flex;
     align-items: center;
+    padding-right: 1.5rem;
 }
 
 .searchbar input {
@@ -245,6 +246,41 @@ html * {
     border-bottom-right-radius: 5px;
 }
 
+/* sidenav */
+.sidenav-close-button {
+    display: flex;
+    justify-content: flex-end;
+    height: 48px;
+    align-items: center;
+    padding: 0 .5em 0 32px;
+    color: #FFF;
+}
+
+.sidenav-close-button svg {
+    padding: 1em;
+}
+
+/* .sidenav li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 32px;
+    background: #ca2730;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    visibility: hidden;
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+}
+
+.sidenav li a.active:before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    visibility: visible;
+} */
+
 /* nav-items links */
 .nav-center li > a, .sidenav li > a {
     color: #002679;
@@ -252,6 +288,11 @@ html * {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+}
+
+.sidenav li > a {
+    display: inline-block;
+    position: relative;
 }
 
 li > a.active {
@@ -296,7 +337,7 @@ li > a.active {
     background-size: cover;
 }
 .carousel .indicators {
-    bottom: 7em;
+    bottom: 5em;
 }
 
 .indicator-item {
@@ -330,7 +371,7 @@ li > a.active {
 /* info */
 .info-top {
     position: absolute;
-    top: -18em;
+    top: -16em;
     z-index: 1019;
     height: 14em;
 }
@@ -399,7 +440,7 @@ li > a.active {
     height: 70vh;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: 10em;
+    margin-bottom: 10em;
 }
 
 .services-list .card {
@@ -416,7 +457,7 @@ li > a.active {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
@@ -455,8 +496,7 @@ li > a.active {
     height: 100%;
     margin-left: 15vh;
     margin-right: 15vh;
-    margin-top: 15em;
-    margin-bottom: 5em;
+    margin-top: 10em;
 }
 
 .feedback-info .card-container {
@@ -825,11 +865,11 @@ li > a.active {
 }
 
 .tabs li > a.active {
-    color: #002679 !important;
+    color: #f92c2c !important;
 } 
 
 .tabs .indicator {
-    background: #002679 !important;
+    background: #f92c2c !important;
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
@@ -999,6 +1039,11 @@ footer {
     position: relative;
 }
 
+.chat-button-animate {
+    bottom: 20px !important;
+    transition: 1s;
+}
+
 .chat-button {
     position: fixed;
     cursor: pointer;
@@ -1009,61 +1054,12 @@ footer {
     overflow: hidden;
     height: 50px;
     width: 50px;
-    background-color: #ca2730;
-    right: 5%; 
-    bottom: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 18px;
+    bottom: 10%;
     z-index: 1022;
 } 
-
-.chat-button-first-content {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-    transition: transform 0.16s linear 0s, opacity 0.08s linear 0s;
-}
-
-.chat-button-first-content svg {
-    height: 25px;
-    width: 25px;
-    fill: #FFF;
-}
-
-.chat-button-first-content.active {
-    opacity: 0;
-}
-
-.chat-button-second-content {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
-    opacity: 0;
-    transform: rotate(-90deg);
-    transition: transform 0.16s linear 0s, opacity 0.08s linear 0s;
-}
-
-.chat-button-second-content svg {
-    height: 14px;
-    width: 14px;
-    fill: #FFF;
-}
-
-.chat-button-second-content.active {
-    opacity: 1;
-}
 
 .footer-button {
     border: 1px solid #FFF !important;
@@ -1099,7 +1095,7 @@ footer {
     border-radius: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    left: 45%;
+    left: 46%;
     top: -35%;
 }
 
@@ -1163,11 +1159,11 @@ footer {
     } 
 
     .headline-icons span > i {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .headline-text span {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     nav .sidenav-trigger {
@@ -1218,28 +1214,25 @@ footer {
     }
 
     .show-on-mobile {
-        display: flex !important;
-        flex-direction: row;
-        top: 32.5%;
-        right: 35%;
+        display: none !important;
     }
 }
 
 @media (max-width: 991.98px) { 
     .chat-button {
-        right: 7.5%;
+        bottom: 12%;
     }
-
+    
     br {
         display: none;
     }
 
     .carousel .indicators {
-        bottom: 7em;
+        bottom: 5em;
     }
 
     .info-top {
-        top: -65%;
+        top: -55%;
         width: auto;
         height: 16em;
         left: 7em;
@@ -1267,7 +1260,7 @@ footer {
     }
 
     .headline-text span {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .etereman-logo {
@@ -1279,10 +1272,7 @@ footer {
 
     .services-list {
         height: 75vh;
-    }
-
-    .feedback-info {
-        margin-top: 50em;
+        margin-bottom: 40em;
     }
 
     .feedback-logo {
@@ -1296,13 +1286,23 @@ footer {
     }
 
     .show-on-mobile {
-        display: flex !important;
-        flex-direction: row;
-        top: 32.5%;
+        display: none !important;
+    }
+
+    .sidenav-close-button {
+        color: #002679;
     }
 }
 
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
+    .nav-on-mobile-bg {
+        background: #002679;
+    }
+
+    .headline-icons-mobile {
+        color: #ffffff;
+    }
+
     .main-cont {
         width: 100% !important;
     }
@@ -1327,11 +1327,24 @@ footer {
         font-size: 15px;
     }
 
+    .sidenav-trigger {
+        color: #ffffff;
+    }
+
+    .sidenav li > a {
+        color: #ffffff;
+    }
+
+    .sidenav {
+        background: rgba(0, 38, 121, .85);
+    }
+
     .show-on-mobile {
         display: flex !important;
         flex-direction: column;
         top: 10%;
         right: 32.5%;
+        color: #ffffff;
     }
 
     .show-on-mobile span:first-child {
@@ -1353,10 +1366,6 @@ footer {
     .chat-button {
         right: 1%;
         bottom: 10%;
-    }
-
-    .chat-button i {
-        font-size: 1em;
     }
     
     .footer-button {
@@ -1456,9 +1465,10 @@ footer {
     }
 
     .services-list {
-        height: 85vh;
+        height: 100vh;
         margin-left: 0;
         margin-right: 0;
+        margin-bottom: 45em;
     }
 
     .carousel-caption h2 {
@@ -1482,18 +1492,19 @@ footer {
         top: -65%;
         right: 1em;
         left: 1em;
-        height: 14em;
+        height: 18em;
     }
 
     .info-image {
         display: flex;
         align-items: center;
-        height: 14em;
+        justify-content: center;
+        height: 9em;
     }
 
     .info-image img {
         height: 120px;
-        width: 120px;
+        width: 200px;
     }
 
     .info-text-divider {
@@ -1522,7 +1533,6 @@ footer {
     .feedback-info {
         margin-left: 0;
         margin-right: 0;
-        margin-top: 50em;
     }
 
     .feedback-logo {

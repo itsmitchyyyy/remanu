@@ -3,10 +3,10 @@
 <div class="container main-cont position-relative">
 	<!-- <div class="message-icon" style="background-image:url(<?php echo get_template_directory_uri() ?>/img/message.png)"></div> -->
 	<div class="row red-bg info-top">
-		<div class="col s4 info-image">
+		<div class="col m4 s12 info-image">
 			<img src="<?php echo get_template_directory_uri() ?>/img/etereman1985.png" alt="">
 		</div>
-		<div class="col s8 info-text">
+		<div class="col m8 s12 info-text">
 			<div class="info-text-top">
 				<span>
 				ETE REMAN is a Remanufacturer of Transmissions <br> 
@@ -30,6 +30,49 @@
 			</div>
 			<div class="company-info-header-video">
 				<iframe src="https://www.youtube.com/embed/w4mfZZvx7Os" frameborder="0" height="350" width="350"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row feedback-info">
+	<div class="card card-container" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-6.png)">
+		<img class="feedback-logo" src="<?php echo get_template_directory_uri() ?>/img/home-trans.png" alt="">
+		<div class="feedback-header">
+			<div class="feedback-heading">
+				<span>what our customers saying</span>
+			</div>
+			<div class="container">
+				<div class="flexbox-row-center">
+					<div class="card feedback-card">
+						<div class="feedback-card-content">
+							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
+							<span>Gordon Liske</span>
+							<span>Vehicle Owner</span>
+							<span>
+								Your team's effort in dealing with product issues, delivery, and customer service response times is truly outstanding.
+								Product failures happen but it is how you deal with them that counts
+							</span>
+						</div>
+					</div>
+					<div class="card feedback-card">
+						<div class="feedback-card-content">
+							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
+							<span>Gordon Liske</span>
+							<span>Vehicle Owner</span>
+							<span>
+								Your team's effort in dealing with product issues, delivery, and customer service response times is truly outstanding.
+								Product failures happen but it is how you deal with them that counts
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="feedback-divider">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -79,48 +122,5 @@
 		</div>
 	</div>
 </div>
-<div class="row feedback-info">
-	<div class="card card-container" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-6.png)">
-		<img class="feedback-logo" src="<?php echo get_template_directory_uri() ?>/img/home-trans.png" alt="">
-		<div class="feedback-header">
-			<div class="feedback-heading">
-				<span>what our customers saying</span>
-			</div>
-			<div class="container">
-				<div class="flexbox-row-center">
-					<div class="card feedback-card">
-						<div class="feedback-card-content">
-							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
-							<span>Gordon Liske</span>
-							<span>Vehicle Owner</span>
-							<span>
-								Your team's effort in dealing with product issues, delivery, and customer service response times is truly outstanding.
-								Product failures happen but it is how you deal with them that counts
-							</span>
-						</div>
-					</div>
-					<div class="card feedback-card">
-						<div class="feedback-card-content">
-							<div style="background-image: url(<?php echo get_template_directory_uri() ?>/img/etereman.png)" class="feedback-card-content-logo"></div>
-							<span>Gordon Liske</span>
-							<span>Vehicle Owner</span>
-							<span>
-								Your team's effort in dealing with product issues, delivery, and customer service response times is truly outstanding.
-								Product failures happen but it is how you deal with them that counts
-							</span>
-						</div>
-					</div>
-				</div>
-				<div class="feedback-divider">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-	</div>
-    <?php include(get_template_directory().'/misc/chat-box.php') ?>
-</div>
+<?php include(get_template_directory().'/misc/chat-box.php') ?>
 <?php get_footer(); ?>

@@ -1,4 +1,12 @@
 $(function(){
+
+    var tabLink = window.location.hash;
+    $('.tab a').each(function(){
+        if(tabLink == $(this).attr('href') && tabLink == '#employment') {
+            $('html, body').scrollTop(700);
+        }
+    });
+
     $('#need-help').click(function(){
         $('.chat-box-container').toggleClass('active');
         $('.chat-button-first-content').toggleClass('active');
@@ -48,14 +56,20 @@ $(function(){
 		$("html, body").animate({scrollTop:0},"slow");
     });
 
+    if($(window).scrollTop()  == 0) {
+        $('#need-help').addClass('chat-button-animate');
+    }
+
     if($(window).scrollTop()  != 0) {
         $('#scrollUp').removeClass('d-none');
     }
     
     $(window).scroll(function(){
         if($(this).scrollTop() == 0) {
+            $('#need-help').addClass('chat-button-animate');
             $('#scrollUp').addClass('d-none');
         } else {
+            $('#need-help').removeClass('chat-button-animate');
             $('#scrollUp').removeClass('d-none');
         }
         // $('.etereman-logo').css('display', "none");
