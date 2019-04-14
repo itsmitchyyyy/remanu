@@ -14,7 +14,6 @@ if (!function_exists('nav_setup')) {
 	}
 }
 
-
 function strip_gallery_from_content($content) {
 	$the_content = preg_replace('/\[gallery.*ids=.(.*).\]/', "", $content);
 	$the_content = apply_filters('the_content' , $the_content);
@@ -54,6 +53,12 @@ function include_jquery() {
 	add_action('wp_enqueue_scripts', 'jquery');
 }
 add_action('wp_enqueue_scripts', 'include_jquery');
+
+function include_axios() {
+	wp_register_script('axiosjs', get_template_directory_uri() . '/js/axios.js', '', 1, true);
+	wp_enqueue_script('axiosjs');
+}
+add_action('wp_enqueue_scripts', 'include_axios');
 
 function loadjs() {
 	wp_register_script('materializejs', get_template_directory_uri() . '/js/materialize.js', '', 1, true);

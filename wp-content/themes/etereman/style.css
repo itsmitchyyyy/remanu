@@ -32,6 +32,10 @@ html * {
     margin-left: 1em !important;
 }
 
+.margin-t-0 {
+    margin-top: 0;
+}
+
 .margin-t-1 {
     margin-top: 1em;
 }
@@ -55,6 +59,14 @@ html * {
 .margin-x-2 {
     margin-right: 2em;
     margin-left: 2em;
+}
+
+.padding-r-3 {
+    padding-right: 3em;
+}
+
+.padding-l-3 {
+    padding-left: 3em;
 }
 
 .h-100 {
@@ -118,7 +130,7 @@ html * {
     position: absolute;
     height: 100px;
     width: 100px;
-    left: 2em;
+    left: 7em;
     top: -.5em;
 }
 
@@ -138,6 +150,7 @@ html * {
     font-family: 'Open Sans', 'sans-serif';
     text-transform: uppercase;
     font-size: 12px;
+    padding-left: 9rem;
 }
 
 .headline-icons {
@@ -145,10 +158,15 @@ html * {
     height: 100%;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 0 !important;
 }
 
 .headline-icons span{
     margin-right: 1em;
+}
+
+.headline-icons span:last-child {
+    margin-right: 0;
 }
 
 .headline-icons span > i {
@@ -206,6 +224,18 @@ html * {
     justify-content: center;
 }
 
+/* nav logo hidden */ 
+.nav-logo-hidden {
+    visibility: hidden;
+}
+
+.nav-logo-hidden a > img {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 0;
+}
+
 /* nav-items-start */
 .nav-start {
     display: flex;
@@ -220,7 +250,7 @@ html * {
     margin-left: auto !important;
     display: flex;
     align-items: center;
-    padding-right: 1.5rem;
+    padding-right: 0;
 }
 
 .searchbar input {
@@ -438,8 +468,8 @@ li > a.active {
 /* services */
 .services-list {
     height: 70vh;
-    margin-left: 15vh;
-    margin-right: 15vh;
+    /* margin-left: 15vh;
+    margin-right: 15vh; */
     margin-bottom: 10em;
 }
 
@@ -484,7 +514,7 @@ li > a.active {
     border: 1px solid #d3d3d3;
     margin-right: 1em;
     margin-left: 1em;
-    width: 45%;
+    width: 43%;
 }
 
 .btn:hover {
@@ -494,8 +524,8 @@ li > a.active {
 /* feedback */
 .feedback-info {
     height: 100%;
-    margin-left: 15vh;
-    margin-right: 15vh;
+    /* margin-left: 15vh;
+    margin-right: 15vh; */
     margin-top: 10em;
 }
 
@@ -541,7 +571,7 @@ li > a.active {
 }
 
 .feedback-card {
-    max-width: 350px;
+    max-width: 300px;
     padding: 1em;
     margin: 1em;
 }
@@ -631,8 +661,8 @@ li > a.active {
 }
 
 .page-support-content-left-container {
-    padding-left: 5em !important;
-    padding-right: 2em !important;
+    /* padding-left: 5em !important; */
+    /* padding-right: 2em !important; */
     padding-bottom: 5em !important;
     margin-top: 5em;
 }
@@ -657,8 +687,8 @@ li > a.active {
 }
 
 .page-support-content-right-container {
-    padding-right: 5em !important;
-    padding-left: 2em !important;
+    /* padding-right: 5em !important; */
+    /* padding-left: 2em !important; */
     padding-bottom: 5em !important;
     margin-top: 5em;
 }
@@ -749,8 +779,8 @@ li > a.active {
 }
 
 .contact-content-left-container {
-    padding-left: 5em !important;
-    padding-right: 2em !important;
+    /* padding-left: 5em !important; */
+    /* padding-right: 2em !important; */
     padding-bottom: 5em !important;
     margin-top: 5em;
 }
@@ -774,8 +804,8 @@ li > a.active {
 }
 
 .contact-content-right-container {
-    padding-right: 5em !important;
-    padding-left: 2em !important;
+    /* padding-right: 5em !important; */
+    /* padding-left: 2em !important; */
     padding-bottom: 5em !important;
     margin-top: 5em;
     position: relative;
@@ -950,8 +980,8 @@ li > a.active {
 }
 
 .tab-careers-content-left-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .tab-careers-content-right {
@@ -964,7 +994,7 @@ li > a.active {
 }
 
 .tab-careers-search-job-select {
-    margin-right: 4em !important;
+    margin-right: 2em !important;
 }
 
 .tab-careers-search-job-input i.prefix {
@@ -1050,10 +1080,10 @@ footer {
     transform-origin: center center;
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     overflow: hidden;
-    height: 50px;
-    width: 50px;
+    height: 85px;
+    width: 74px;
     background-size: cover;
     background-repeat: no-repeat;
     right: 18px;
@@ -1216,6 +1246,10 @@ footer {
     .show-on-mobile {
         display: none !important;
     }
+    
+    .searchbar {
+        padding-left: 1.5em;
+    }
 }
 
 @media (max-width: 991.98px) { 
@@ -1271,7 +1305,7 @@ footer {
     }
 
     .services-list {
-        height: 75vh;
+        height: 55vh;
         margin-bottom: 40em;
     }
 
@@ -1290,11 +1324,31 @@ footer {
     }
 
     .sidenav-close-button {
-        color: #002679;
+        color: #ffffff;
+    }
+    
+    .searchbar {
+        padding-left: 1.5em;
     }
 }
 
 @media (max-width: 575.98px) {
+    .searchbar {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .searchbar input {
+        color: #fff;
+        border: 1px solid #fff !important;
+        border-right: none !important;
+    }
+
+    .searchbar span {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
     .nav-on-mobile-bg {
         background: #002679;
     }
@@ -1375,7 +1429,7 @@ footer {
 
     .contact-content-right-container {
         margin-top: 0em;
-        padding-right: 2em !important;
+        /* padding-right: 2em !important; */
     }
 
     .contact-content-testimonial-container {
@@ -1390,9 +1444,9 @@ footer {
         height: 60vh;
     }
 
-    .contact-content-left-container {
+    /* .contact-content-left-container {
         padding-left: 2em !important;
-    }
+    } */
 
     .tabs .tab a {
         font-size: 15px;
@@ -1426,9 +1480,9 @@ footer {
         width: 100%;
     }
 
-    .page-support-content-left-container {
+    /* .page-support-content-left-container {
         padding-left: 2em !important;
-    }
+    } */
 
     .page-support-content-right-container {
         display: none !important;
@@ -1465,9 +1519,9 @@ footer {
     }
 
     .services-list {
-        height: 100vh;
-        margin-left: 0;
-        margin-right: 0;
+        height: 65vh;
+        /* margin-left: 0;
+        margin-right: 0; */
         margin-bottom: 45em;
     }
 
@@ -1530,10 +1584,10 @@ footer {
         margin-top: 15em;
     }
 
-    .feedback-info {
+    /* .feedback-info {
         margin-left: 0;
         margin-right: 0;
-    }
+    } */
 
     .feedback-logo {
         height: 100px;

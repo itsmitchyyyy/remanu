@@ -8,8 +8,8 @@
             <span>Above and Beyond Warranty Claims</span>
         </div>
     </div>
-    <div class="row page-content-container">
-        <div class="col s12 m8 page-support-content-left-container white-bg">
+    <div class="row page-content-container container">
+        <div class="col s12 m7 page-support-content-left-container white-bg">
             <div class="page-support-content-left">
                 <div class="d-flex flex-column">
                     <h3 class="text-uppercase page-support-content-left-header">The best warranty in the business</h3>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s4 page-support-content-right-container">
+        <div class="col s5 page-support-content-right-container">
             <div class="d-flex flex-column page-support-content-right">
                 <div class="page-support-content-right-header-image" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/engine-transparent.png)"></div>
                 <h3 class="page-support-content-right-header">Warranty Questions?</h3>

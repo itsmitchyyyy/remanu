@@ -1,5 +1,36 @@
-$(function(){
+// jobs office
+axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/offices')
+    .then(function(response){
+        var $select = $('.selectJobOffices');
+        response.data.offices.map(function(options){
+           var $option = $('<option>');
+                $option
+                .val(options[$select.attr('data-valueKey')])
+                .text(options[$select.attr('data-displayKey')]);
+            
+            $select.append($option);
+        });
+        $select.formSelect();
+    });
 
+// jobs department
+axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/departments')
+.then(function(response){
+    var $select = $('.selectJobDepartments');
+    response.data.departments.map(function(options){
+       var $option = $('<option>');
+            $option
+            .val(options[$select.attr('data-valueKey')])
+            .text(options[$select.attr('data-displayKey')]);
+        
+        $select.append($option);
+    });
+    $select.formSelect();
+});
+
+// jquery
+$(function(){
+// return 'https://boards-api.greenhouse.io/v1/boards/etereman/'.$type;
     var tabLink = window.location.hash;
     $('.tab a').each(function(){
         if(tabLink == $(this).attr('href') && tabLink == '#employment') {
@@ -32,7 +63,6 @@ $(function(){
         edge: 'right'
     });
 
-    // var autoplay = true;
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
         indicators: true,
@@ -45,12 +75,6 @@ $(function(){
     setInterval(function(){
             $('.carousel.carousel-slider').carousel('next');
     }, 4500);
-
-    // $('.carousel.carousel-slider').hover(function(){
-    //     autoplay = false;
-    // }, function(){
-    //     autoplay = true;
-    // });
 
     $('#scrollUp').click(function(){
 		$("html, body").animate({scrollTop:0},"slow");
@@ -72,11 +96,5 @@ $(function(){
             $('#need-help').removeClass('chat-button-animate');
             $('#scrollUp').removeClass('d-none');
         }
-        // $('.etereman-logo').css('display', "none");
-        // clearTimeout($.data(this, "scrollCheck"));
-    
-        // $.data(this, "scrollCheck", setTimeout(function(){
-        //     $('.etereman-logo').css('display', "block");
-        // }, 250));
     });
 });

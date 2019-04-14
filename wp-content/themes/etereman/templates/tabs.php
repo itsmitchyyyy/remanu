@@ -4,8 +4,8 @@
     <div class="tab-careers-info-video-container ">
             <iframe src="https://www.youtube.com/embed/w4mfZZvx7Os" frameborder="0"></iframe>
     </div>
-    <div class="tabs-container">
-        <div class="row tabs-row">
+    <div class="tabs-container container">
+        <div class="row">
             <div class="col s12 tab-list-container">
                 <!-- <button class="need-help" id="need-help">
                     <i class="fa fa-envelope"></i>
@@ -194,55 +194,60 @@
                         <h5>Search Jobs</h5>
                         <small>Begin the application process by checking out our current openings.</small>
                     </div>
-                    <div class="row">
-                        <div class="col input-field m3 s12 tab-careers-search-job-select">
+                    <div class="row margin-t-1">
+                        <div class="col input-field m3 s12 ">
                             <select>
-                                <option value="" disabled selected>Job Function</option>
+                                <option value="" disabled selected>Choose a job family</option>
                                 <option value="job">job</option>
                                 <option value="job">job</option>
                                 <option value="job">job</option>
                             </select>
+                            <label>What is your area of interest?</label>
                         </div>
-                        <div class="col input-field m3 s12 tab-careers-search-job-select">
-                            <select>
-                                <option value="" disabled selected>Location</option>
-                                <option value="location">location</option>
-                                <option value="location">location</option>
-                                <option value="location">location</option>
+                        <div class="col input-field m3 s12">
+                            <select class="selectJobDepartments" data-valueKey="id" data-displayKey="name">
+                                <option value="" disabled selected>Choose a position type</option>
                             </select>
+                            <label>What type of position?</label>
                         </div>
-                        <div class="col input-field m3 s12 tab-careers-search-job-input">
-                            <i class="fa fa-search prefix"></i>
-                            <input type="text" id="keyword">
-                            <label for="keyword">Keyword</label>
+                        <div class="col input-field m3 s12 ">
+                            <select class="selectJobOffices" data-valueKey="id" data-displayKey="name">
+                                <option value="" disabled selected>Choose a location</option>
+                            </select>
+                            <label>Where would you like to work?</label>
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <button class="btn waves-light waves-ripple default-bg">Search</button>
+                        <div class="col m3 s12 input-field d-flex justify-content-center align-items-center">
+                            <button class="btn waves-light waves-ripple default-bg">Search</button>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column tab-careers-bottom-section">
-                    <h4 class="text-uppercase">about ete reman</h4>
-                    <span class="margin-t-2">
-                        ETE REMAN is the 3rd largest transmission remanufacturer in the United States.
-                        This means our remanufactured transmissions are available at installations
-                        facilities throughout the entire country, and you might even have one under your own hood!
-                    </span>
-                    <span class="margin-t-2">
-                        Remarkable Customer Service - Everyday, the ETE REMAN team is focused on one mission: 
-                        To deliver remarkable customer service unmatched by others.
-                    </span>
-                    <span class="margin-t-2">
-                        True Partnership - Sharing is one of the basic lessions we all were taught in grade school.
-                        This virtue is just as important today in our business.
-                        We treat our business relationships like partnerships by sharing both the joys and pains of business with our customers.
-                    </span>
-                    <span class="margin-t-2">
-                        Tremendous Quality - Quality begins, well, at the beginning. Research and Development engineers analyze all transmissions and then design
-                        replacement parts which often, improve upon the quality of the original component. Each part and each process is designed to create OE+ &trade; quality
-                        transmissions. But, the true scientists at ETE Reman do not stop there; we keep looking at our creations, at our processes,
-                        to find ways to make transmissions even better.  Not good, not great, Tremendous.
-                    </span>
+                <div class="d-flex flex-row tab-careers-bottom-section">
+                    <div class="d-flex">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/blank-avatar.png" alt="">
+                    </div>
+                    <div class="d-flex flex-column padding-r-3 padding-l-3">
+                        <h4 class="text-uppercase margin-t-0">about ete reman</h4>
+                        <span class="margin-t-1">
+                            ETE REMAN is the 3rd largest transmission remanufacturer in the United States.
+                            This means our remanufactured transmissions are available at installations
+                            facilities throughout the entire country, and you might even have one under your own hood!
+                        </span>
+                        <span class="margin-t-1">
+                            Remarkable Customer Service - Everyday, the ETE REMAN team is focused on one mission: 
+                            To deliver remarkable customer service unmatched by others.
+                        </span>
+                        <span class="margin-t-1">
+                            True Partnership - Sharing is one of the basic lessions we all were taught in grade school.
+                            This virtue is just as important today in our business.
+                            We treat our business relationships like partnerships by sharing both the joys and pains of business with our customers.
+                        </span>
+                        <span class="margin-t-1">
+                            Tremendous Quality - Quality begins, well, at the beginning. Research and Development engineers analyze all transmissions and then design
+                            replacement parts which often, improve upon the quality of the original component. Each part and each process is designed to create OE+ &trade; quality
+                            transmissions. But, the true scientists at ETE Reman do not stop there; we keep looking at our creations, at our processes,
+                            to find ways to make transmissions even better.  Not good, not great, Tremendous.
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

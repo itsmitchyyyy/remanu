@@ -22,7 +22,7 @@
 	<div class="nav-wrapper">
 		<div class="container" style="height: inherit">
 			<div class="row" style="height: 100%">
-				<div class="col s8 headline-text">
+				<div class="col s10 headline-text">
 					<span>
 						Have any questions? 
 						<b>1-800-934-9479</b>  |
@@ -30,7 +30,7 @@
 					<a href="#">car care centers</a>
 					</span>
 				</div>
-				<div class="col s4 headline-icons">
+				<div class="col s2 headline-icons">
 					<span>
 						<i class="fa fa-envelope"></i>
 					</span>
@@ -60,6 +60,11 @@
 					<span><b>1-800-934-9479</b></span>
 					</div>
 		  <ul class="nav-center justify-content-start container hide-on-med-and-down">
+					<li class="nav-logo-hidden">
+						<a href="#">
+							<img src="<?php echo get_template_directory_uri() ?>/img/etereman.png" alt="Etereman" class="etereman-logo">
+						</a>
+					</li>
 				<?php foreach($menu as $menus): ?>
 					<li>
 						<?php if(is_page($menus->title)) : ?>
@@ -72,9 +77,9 @@
 					</li>
 				<?php endforeach; ?>
 				<div class="searchbar">
-						<input type="text" id="search" placeholder="Search Here..">
-						<span class="fa fa-search"></span>
-					</div>
+					<input type="text" id="search" placeholder="Search Here..">
+					<span class="fa fa-search"></span>
+				</div>
 	      </ul>
 	    </div>
 	</nav>
@@ -110,6 +115,11 @@
 		<li>
 			<a href="#">car care centers</a>
 		</li>
+		<div class="searchbar">
+				<input type="text" id="search" placeholder="Search Here..">
+				<span class="fa fa-search"></span>
+			</div>
+
 		<div class="divider margin-r-1 margin-l-1"></div>
 		<div class="headline-icons-mobile margin-t-1">
 			<span>

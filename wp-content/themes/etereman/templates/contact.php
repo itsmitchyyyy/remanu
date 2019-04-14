@@ -7,7 +7,7 @@
             <h1>contact</h1>
         </div>
     </div>
-    <div class="row contact-content-container">
+    <div class="row contact-content-container container">
         <div class="col m8 s12 contact-content-left-container white-bg">
             <div class="contact-content-left">
                 <div class="d-flex flex-column">

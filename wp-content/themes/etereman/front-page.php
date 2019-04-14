@@ -34,7 +34,7 @@
 		</div>
 	</div>
 </div>
-<div class="row feedback-info">
+<div class="row feedback-info container">
 	<div class="card card-container" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/card-6.png)">
 		<img class="feedback-logo" src="<?php echo get_template_directory_uri() ?>/img/home-trans.png" alt="">
 		<div class="feedback-header">
@@ -77,7 +77,7 @@
 		</div>
 	</div>
 </div>
-<div class="row services-list">
+<div class="row services-list container">
 	<div class="card">
 		<div class="col s12 m12 l6 services-info">
 			<div class="services-info-details lazyload" data-src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/image-loader.gif)">
