@@ -3,9 +3,9 @@ get_header();
 global $post;
 $category = get_posts();
 include(get_template_directory().'/misc/carousel.php'); ?>
-<div class="container-fluid">
-    <div class="d-flex flex-row mt-5 mb-5">
-        <div class="d-flex flex-column post-container  w-75 mr-2">
+<div class="container-fluid inside-page-container p-0">
+    <div class="d-flex flex-row">
+        <div class="d-flex flex-column  contact-contents post-container  w-75 mr-2 bg-light">
             <div class="d-flex w-100">
                 <h3>REACH US FOR ANSWERS</h3>
             </div>
@@ -54,9 +54,9 @@ include(get_template_directory().'/misc/carousel.php'); ?>
                 </form>
             </div>
         </div>
-        <div class="align-items-center side-post-container d-flex flex-column w-25 ml-3">
+        <div class="align-items-center side-post-container d-flex flex-column w-25 ml-3 side-contact-contents">
             <div class="m-2 w-100">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" class="w-100" height="300" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/PHJC4jMndgE" class="w-100" height="300" frameborder="0"></iframe>
             </div>
             <div class="m-2 w-100">
                 <div class="d-flex flex-column p-2 bg-custom">
@@ -69,7 +69,7 @@ include(get_template_directory().'/misc/carousel.php'); ?>
                         </form>
                     </div>
                     <div class="m-1">
-                        <a class="btn card-button-link text-white w-50">SIGN ME UP!</a>
+                        <a class="btn card-button-link text-white">SIGN ME UP!</a>
                     </div>
                 </div>
             </div>

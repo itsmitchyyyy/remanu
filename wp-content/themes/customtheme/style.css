@@ -10,6 +10,10 @@ body {
 	background: #e7e7e7;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 header {
 	background: #495a73;
 	width: 100%;
@@ -24,18 +28,42 @@ footer {
 }
 
 .footer-button-up {
-	border: 1px solid white !important;
+	/* border: 1px solid white !important;
 	right: 5em;
-	bottom: 3em;
+	bottom: 3em; */
+	border: 1px solid #FFF !important;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 100;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .footer-button-up > i {
 	font-size: 5vh;
 }
 
+.cont {
+	max-width: 1140px;
+}
+
 .front-page-title {
 	color: #2f4688;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .front-page-recent {
@@ -92,9 +120,9 @@ footer {
 }
 
 .header-text {
-	font-family: 'Gotham';
+	font-family: 'Gotham Book';
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .carousel-caption-title {
@@ -142,6 +170,13 @@ footer {
 	background: #6e7c90;
 }
 
+.hyphenated p {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
 .gallery-box {
 	height: 200px;
 	width: 200px;
@@ -149,16 +184,20 @@ footer {
 
 .sales-image {
 	height: 50vh;
-	width: 50vw;
+	width: 100%;
+}
+
+.sales-image img {
+	object-fit: cover;
 }
 
 .sales-image-person {
-	width: 25vh;
-	height: 25vh ;
+	width: 200px;
+	height: 150px;
 }
 
 .nav-image-container {
-	top: 1.5em;
+	top: -1em;
     bottom: 0;
     height: 80px;
     z-index: 1021;
@@ -179,7 +218,7 @@ footer {
     background-position: center;
 	bottom: 12vh;
     box-shadow: 0px 2px 10px 2px #6e7c90;
-    left: 47vw;
+    left: 46vw;
     border-radius: 100%;
     background-image: url(http://remanu.paykame.com/wp-content/themes/customtheme/img/remanu.png);
     width: 100px;
@@ -193,6 +232,110 @@ footer {
 	align-items: flex-end;
 }
 
+#navCollapse form {
+	width: 20%;
+}
+
+.post-container {
+	padding: 0 1em 3.5em 8em !important;
+}
+
+.side-post-container {
+	padding-right: 1rem;
+	margin-right: 8em !important;
+}
+
+
+.contact-contents {
+	padding: 3.5em 1em 3.5em 8em !important
+}
+
+.side-contact-contents {
+	margin-right: 8em !important;
+}
+
+.headline-text-mobile {
+	width: 50%;
+    right: 6em;
+    position: absolute;
+    display: none;
+}
+.headline-text-mobile span {
+	font-size: 10px;
+}
+
+.divider {
+	background: rgba(0,0,0,.4);
+    height: .1em;
+    width: 100%;
+}
+
+.nav-on-mobile {
+	display: none;
+}
+
+.inside-page-container {
+    padding-right: 6.5em;
+    padding-left: 6.5em;
+}
+
+/* enrollnow */
+.enroll-now-container {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.enroll-now-image {
+	height: 300px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.enroll-now-image img {
+	height: 100%;
+	width: 900px;
+}
+
+.enroll-now-text-header {
+	display: flex;
+	flex-direction: column;
+	width: 100;
+	align-self: center;
+}
+
+.enroll-now-form {
+	width: 100%;
+	align-self: center;
+}
+
+@media (min-width: 1899.98px) {
+	.footer-image-container {
+		bottom: 8vh;
+		left: 48vw;
+	}
+
+	.footer-button-up {
+		bottom: 2em;
+	}
+
+	.nav-image-container {
+		left: 20em;
+	}
+
+	.inside-page-container {
+		padding-left: 25em;
+		padding-right: 25em;
+	}
+}
+
+@media (max-width: 1299.98px) {
+	.footer-image-container {
+		left: 46.5vw;
+	}
+}
+
 @media (max-width: 1199.98px) { 
 	.card-width-blog {
 		width: 22.5em;
@@ -204,7 +347,7 @@ footer {
 	}
 
 	.nav-image-container {
-		top: 2em;
+		top: -.5em;
 		left: .5em;
 		height: 80px;
 		width: 80px;
@@ -234,12 +377,26 @@ footer {
 		overflow: auto;
 		background: #ffffff;
 	}
+	
+	#navCollapse form {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	
+	#primary-menu li {
+		line-height: 48px;
+		padding-left: .5em;
+	}
+	
+	.nav-on-mobile {
+		display: block;
+	}
  }
 
  @media (max-width: 991.98px) {
 	
 	.nav-image-container {
-		top: 2.5em;
+		top: -.5em;
 		left: .5em !important;
 	}
 
@@ -248,6 +405,7 @@ footer {
 	}
 
 	.post-container {
+		padding: 0 !important;
 		width: 50% !important;
 		justify-content: center !important;
 	}
@@ -257,12 +415,13 @@ footer {
 	}
 
 	.footer-image-container {
-		bottom: 13	vh;
-		left: 45vw;
+		bottom: 13vh;
+		left: 44vw;
 	}
 
 	.side-post-container {
 		width: 50% !important;
+		margin-right: 1em !important;
 	}
 
 	#primary-menu {
@@ -272,6 +431,25 @@ footer {
 	#navCollapse {
 		align-items: flex-start;
 	}
+	
+	#navCollapse form {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	
+	#primary-menu li {
+		line-height: 48px;
+		padding-left: .5em;
+	}
+	
+	.nav-on-mobile {
+		display: block;
+	}
+	
+	.inside-page-container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
  }
 
  @media (max-width: 767.98px) { 
@@ -279,8 +457,13 @@ footer {
 		display: none;
 	}
 
+	.footer-image-container {
+		bottom: 25vh;
+		left: 43vw;
+	}
+
 	.copyright {
-		width: 90%;
+		width: 100%;
 		text-align: center;
 	}
 
@@ -309,10 +492,47 @@ footer {
 	#navCollapse {
 		align-items: flex-start;
 	}
+	
+	#navCollapse form {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+	
+	#primary-menu li {
+		line-height: 48px;
+		padding-left: .5em;
+	}
+
+	.nav-on-mobile {
+		display: block;
+	}
+
+	.inside-page-container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
  }
 
 
 @media (max-width: 575.98px) {
+	.nav-on-mobile {
+		display: block;
+	}
+
+	#primary-menu li {
+		line-height: 48px;
+		padding-left: .5em;
+	}
+	
+	#navCollapse form {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+
+	.headline-text-mobile {
+		display: flex;
+	}
+
 	.header {display: none}
 
 	.article-container {
@@ -334,7 +554,7 @@ footer {
 	}
 
 	.copyright {
-		width: 80% !important;
+		width: 100% !important;
 	}
 
 	.footer-button-up {
@@ -349,6 +569,7 @@ footer {
 	.post-container {
 		width: 100% !important;
 		justify-content: center !important;
+		padding: 0 !important;
 	}
 
 	.side-post-container {
@@ -373,8 +594,8 @@ footer {
 	}
 	
 	.footer-image-container {
-		bottom: 15vh;
-		left: 35vw;
+		bottom: 13vh;
+		left: 36vw;
 	}
 
 	#primary-menu {
@@ -383,5 +604,10 @@ footer {
 	
 	#navCollapse {
 		align-items: flex-start;
+	}
+
+	.inside-page-container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
  }

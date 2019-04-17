@@ -1,5 +1,7 @@
 $(function(){
+	
 	$('img.lazyload').lazyload();
+	$('div.lazyload').lazyload();
 
 	$(".carousel.lazy").on('slide.bs.carousel', function(ev){
 		var lazy;
@@ -27,6 +29,10 @@ $(function(){
 		$("html, body").animate({scrollTop:0},"slow");
 	});
 
+	if($(window).scrollTop() == 0) {
+		$('#scrollToTop').hide();
+	}
+
 	if	(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ||
 		(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
 			$('li.menu-item').find('a').each(function(){
@@ -46,12 +52,11 @@ $(function(){
 });
 
 $(window).scroll(function(){
-	$('.nav-image-container').css('z-index', "1");
-	clearTimeout($.data(this, "scrollCheck"));
-
-	$.data(this, "scrollCheck", setTimeout(function(){
-		$('.nav-image-container').css('z-index', "1021");
-	}, 250));
+	if($(this).scrollTop() == 0) {
+		$('#scrollToTop').hide();
+	} else {
+		$('#scrollToTop').show();
+	}
 });
 
 $(document).on('click', function(e){

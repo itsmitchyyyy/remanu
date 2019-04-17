@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="container-fluid">
-	<div class="d-flex flex-column m-5 article-container">
+<div class="container-fluid inside-page-container pt-5 bg-light">
+	<div class="d-flex flex-column mr-5 ml-5 mb-5 article-container">
 		<div class="d-flex flex-column mb-2 mt-2">
 			<h3 style="text-transform: uppercase"><?php the_title() ?></h3>
 		</div>
@@ -25,7 +25,7 @@
                 </div>
 			</div>
             <div class="border-custom"></div>
-            <div class="d-flex mt-2">
+            <div class="d-flex mb-5 mt-2">
                 <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
             </div>
 		<?php endwhile; endif; ?>	

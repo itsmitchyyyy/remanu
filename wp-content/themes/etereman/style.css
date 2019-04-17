@@ -180,7 +180,8 @@ html * {
 }
 
 .headline-icons-mobile span {
-    margin-right: 1em;  
+    flex: 1 1 auto;
+    text-align: center;
 }
 
 

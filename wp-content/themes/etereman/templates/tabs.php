@@ -196,22 +196,19 @@
                     </div>
                     <div class="row margin-t-1">
                         <div class="col input-field m3 s12 ">
-                            <select>
+                            <select class="selectJobFamily" data-valueKey="id" data-displayKey="name">
                                 <option value="" disabled selected>Choose a job family</option>
-                                <option value="job">job</option>
-                                <option value="job">job</option>
-                                <option value="job">job</option>
                             </select>
                             <label>What is your area of interest?</label>
                         </div>
                         <div class="col input-field m3 s12">
-                            <select class="selectJobDepartments" data-valueKey="id" data-displayKey="name">
+                            <select class="selectJobPosition" data-valueKey="id" data-displayKey="title" disabled>
                                 <option value="" disabled selected>Choose a position type</option>
                             </select>
                             <label>What type of position?</label>
                         </div>
                         <div class="col input-field m3 s12 ">
-                            <select class="selectJobOffices" data-valueKey="id" data-displayKey="name">
+                            <select class="selectJobOffices" data-valueKey="id" data-displayKey="name" disabled>
                                 <option value="" disabled selected>Choose a location</option>
                             </select>
                             <label>Where would you like to work?</label>

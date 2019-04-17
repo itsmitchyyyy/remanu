@@ -14,10 +14,11 @@
 </head>
 <body <?php body_class(); ?>>
 <?php $custom_theme_data = custom_theme_get_options(); ?>
-<header class="sticky-top">
+<div class="sticky-top">
+<header>
 	<div class="d-flex row-wrap container">
 		<div class="d-flex headline flex-grow-1 justify-content-end align-items-center">
-			<div class="container pl-0">
+			<div class="container pl-4">
 				<span class="text-center header-text">Your weekly source of sales, marketing, customer service, and management insight - compliments of Ete Raman</span>
 			</div>
 		</div>
@@ -37,14 +38,18 @@
 		</div>
 	</div>
 </header>
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+	<div class="container">
+	
 <div class="position-absolute nav-image-container">
 	<a href="<?php echo get_home_url() ?>">
 		<img src="<?php echo get_template_directory_uri() ?>/img/remanu.png" alt="" class="nav-image h-100 w-100">
 	</a>
 </div>
-<nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
-	<div class="container-fluid">
 		<a class="navbar-brand" href="#"></a>
+		<div class="headline-text-mobile">
+			<span>Your weekly source of sales, marketing, customer service, and management insight - compliments of Ete Raman</span>
+		</div>
 		<button class="navbar-toggler" type="button">
 		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -55,12 +60,12 @@
 					'menu_id' => 'primary-menu',
 					'depth' => 2,
 					'container' => false,
-					'menu_class' => 'navbar-nav mx-auto',
+					'menu_class' => 'navbar-nav',
 					'walker' => new Bootstrap_NavWalker(),
 					'fallback_cb' => 'Bootstrap_NavWalker::fallback'
 				)
 			); ?>
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline ml-3 my-2 my-lg-0">
 				<div class="input-group">
       				<input class="form-control border-right-0 search" type="search" placeholder="Search" aria-label="Search">
 					<div class="input-group-append">
@@ -69,7 +74,25 @@
 						</span>
 					</div>
 				</div>
-    		</form>
+			</form>
+			<div class="nav-on-mobile">
+				<div class="divider"></div>
+				<div class="m-1">
+					<span class="m-1">
+						<i class="far fa-envelope"></i>
+					</span>
+					<span class="m-1">
+						<i class="fab fa-twitter"></i>
+					</span>
+					<span class="m-1">
+						<i class="fab fa-facebook-f"></i>
+					</span>
+					<span class="m-1">
+						<i class="fab fa-linkedin"></i>
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </nav>
+</div>

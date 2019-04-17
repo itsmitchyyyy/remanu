@@ -3,8 +3,8 @@ get_header();
 global $post;
 $slug = get_category_by_slug('whats-reman-u');
 $category = get_posts(array('category' => $slug->cat_ID)); ?>
-<div class="container-fluid">
-    <div class="mt-5 mb-5">
+<div class="container-fluid inside-page-container pt-5 bg-light">
+    <div class="pb-5">
         <h3>What's REMAN U?</h3>
         <div class="d-flex" style="height: 80vh">
             <iframe id="videoFrame" src="https://www.youtube.com/embed/PHJC4jMndgE?wmode=transparent" wmode="Opaque" class="w-100" frameborder="0"></iframe>

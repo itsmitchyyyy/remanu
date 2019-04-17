@@ -1,7 +1,7 @@
 <footer class="d-flex justify-content-center pb-3 position-relative pt-5">
     <div class="position-absolute footer-image-container"></div>
-    <button class="footer-button-up bg-transparent position-absolute text-white" id="scrollToTop">
-        <i class="fa fa-angle-up m-2"></i>
+    <button class="footer-button-up text-white" id="scrollToTop">
+        <span class="fa fa-angle-up m-2"></span>
     </button>
     <div class="d-flex flex-column">
         <div class="d-flex flex-row justify-content-center">

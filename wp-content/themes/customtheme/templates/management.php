@@ -3,8 +3,8 @@ get_header();
 global $post;
 $slug = get_category_by_slug('management');
 $category = get_posts(array('category' => $slug->cat_ID)); ?>
-<div class="container-fluid">
-    <div class="d-flex flex-column m-5 article-container">
+<div class="container-fluid inside-page-container pt-5 bg-light">
+    <div class="d-flex flex-column mr-5 ml-5 pb-5 article-container">
         <?php $i = 0; ?>
         <?php foreach($category as $post): setup_postdata($post); ?>
         <?php if($i < 4): ?>
@@ -12,7 +12,7 @@ $category = get_posts(array('category' => $slug->cat_ID)); ?>
             <div class="d-flex">
                 <h3 class="text-uppercase"><?php the_title() ?></h3>
             </div>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row flex-wrap">
                 <span class="mr-1"><?php echo get_the_date() ?> BY <?php echo ucwords(get_the_author()) ?></span>
                 <span class="ml-1"><a href="">Leave a comment</a></span>
             </div>
@@ -20,7 +20,7 @@ $category = get_posts(array('category' => $slug->cat_ID)); ?>
                 <img class="h-100 w-100" src="<?php the_post_thumbnail_url() ?>" alt="">
             </div>
             <div class="d-flex mt-2 mb-2">
-                <span><?php the_content() ?></span>
+                <span class="hyphenated"><?php the_content() ?></span>
             </div>
             <div class="border-custom"></div>
             <div class="d-flex flex-row mt-2 mr-2 mb-2 sales-person-data">

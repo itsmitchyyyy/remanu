@@ -1,36 +1,47 @@
-// jobs office
-axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/offices')
-    .then(function(response){
-        var $select = $('.selectJobOffices');
-        response.data.offices.map(function(options){
-           var $option = $('<option>');
-                $option
-                .val(options[$select.attr('data-valueKey')])
-                .text(options[$select.attr('data-displayKey')]);
-            
-            $select.append($option);
-        });
-        $select.formSelect();
-    });
 
-// jobs department
-axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/departments')
-.then(function(response){
-    var $select = $('.selectJobDepartments');
-    response.data.departments.map(function(options){
-       var $option = $('<option>');
-            $option
-            .val(options[$select.attr('data-valueKey')])
-            .text(options[$select.attr('data-displayKey')]);
-        
-        $select.append($option);
-    });
-    $select.formSelect();
-});
+
 
 // jquery
 $(function(){
-// return 'https://boards-api.greenhouse.io/v1/boards/etereman/'.$type;
+    var $selectJobFamily = $('.selectJobFamily');
+    var $selectJobPosition = $('.selectJobPosition');
+    var $selectJobOffices = $('.selectJobOffices');
+
+    //job family
+    axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/departments')
+        .then(function(response) {
+            sessionStorage.setItem('departments', JSON.stringify(response.data.departments));
+        
+            response.data.departments.map(function(options){
+                var $option = $('<option>');
+                    $option
+                        .val(options[$selectJobFamily.attr('data-valueKey')])
+                        .text(options[$selectJobFamily.attr('data-displayKey')]);
+
+                    $selectJobFamily.append($option);
+            });
+        $selectJobFamily.formSelect();
+    });
+
+    $selectJobFamily.change(function(){
+        $selectJobPosition.prop('disabled', false);
+        var name = $(this).find('option:selected').text();
+        var jsonPosition = JSON.parse(sessionStorage.getItem('departments'));
+        jsonPosition.map(function(res){
+               if(name == res.name) {
+                   res.jobs.map(function(job) {
+                        var $option = $('<option>');
+                        $option
+                            .val(job[$selectJobPosition.attr('data-valueKey')])
+                            .text(job[$selectJobPosition.attr('data-displayKey')]);
+                        
+                        $selectJobPosition.append($option);
+                   });
+               }
+        });
+        $selectJobPosition.formSelect();
+    });
+
     var tabLink = window.location.hash;
     $('.tab a').each(function(){
         if(tabLink == $(this).attr('href') && tabLink == '#employment') {
