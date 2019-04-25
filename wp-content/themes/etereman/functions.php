@@ -65,6 +65,8 @@ function loadjs() {
 	wp_enqueue_script('materializejs');
 	wp_register_script('lazyloadjs', get_template_directory_uri() . '/js/lazyload.js', '', 1, true);
 	wp_enqueue_script('lazyloadjs');
+	wp_register_script('momentjs', get_template_directory_uri() . '/js/moment.js', '', 1, true);
+	wp_enqueue_script('momentjs');
 	wp_register_script('customjs', get_template_directory_uri() . '/custom.js', '', 1, true);
 	wp_enqueue_script('customjs');
 }

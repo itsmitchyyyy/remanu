@@ -190,25 +190,26 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column tab-careers-search-job">
+                    <form id="searchBoxForm" action="<?php echo get_site_url() ?>/careers-list">
                     <div class="d-flex flex-column">
                         <h5>Search Jobs</h5>
                         <small>Begin the application process by checking out our current openings.</small>
                     </div>
                     <div class="row margin-t-1">
                         <div class="col input-field m3 s12 ">
-                            <select class="selectJobFamily" data-valueKey="id" data-displayKey="name">
+                            <select class="selectJobFamily" name="area" data-valueKey="name" data-displayKey="name">
                                 <option value="" disabled selected>Choose a job family</option>
                             </select>
                             <label>What is your area of interest?</label>
                         </div>
                         <div class="col input-field m3 s12">
-                            <select class="selectJobPosition" data-valueKey="id" data-displayKey="title" disabled>
+                            <select class="selectJobPosition" name="position" data-valueKey="title" data-displayKey="title" disabled>
                                 <option value="" disabled selected>Choose a position type</option>
                             </select>
                             <label>What type of position?</label>
                         </div>
                         <div class="col input-field m3 s12 ">
-                            <select class="selectJobOffices" data-valueKey="id" data-displayKey="name" disabled>
+                            <select class="selectJobOffices" name="location" data-valueKey="name" data-displayKey="name" disabled>
                                 <option value="" disabled selected>Choose a location</option>
                             </select>
                             <label>Where would you like to work?</label>
@@ -217,12 +218,13 @@
                             <button class="btn waves-light waves-ripple default-bg">Search</button>
                         </div>
                     </div>
+                    </form>
                 </div>
                 <div class="d-flex flex-row tab-careers-bottom-section">
-                    <div class="d-flex">
+                    <div class="d-flex tab-careers-bottom-section-content-image">
                         <img src="<?php echo get_template_directory_uri() ?>/img/blank-avatar.png" alt="">
                     </div>
-                    <div class="d-flex flex-column padding-r-3 padding-l-3">
+                    <div class="d-flex flex-column padding-r-3 padding-l-3 tab-careers-bottom-section-content-text">
                         <h4 class="text-uppercase margin-t-0">about ete reman</h4>
                         <span class="margin-t-1">
                             ETE REMAN is the 3rd largest transmission remanufacturer in the United States.
