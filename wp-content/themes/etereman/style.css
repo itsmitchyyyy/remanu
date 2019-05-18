@@ -3,6 +3,11 @@ Theme Name: Etereman Theme
 Auth: Mitch Alforque
 */
 
+/* Override */
+.datepicker-modal {
+    top: 25% !important;
+}
+
 /* Custom  */
 html * {
     font-family: 'Gotham Book';
@@ -1138,6 +1143,18 @@ li > a.active {
 .career-details-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+/* career apply */
+.career-apply-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.career-apply-form {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 /* footer */

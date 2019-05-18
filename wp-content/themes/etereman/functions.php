@@ -1,5 +1,4 @@
 <?php
-
 add_theme_support('menus');
 
 add_action('after_setup_theme', 'nav_setup');
@@ -51,6 +50,10 @@ function include_jquery() {
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3-3-1.js', '', 1, true);
 	add_action('wp_enqueue_scripts', 'jquery');
+	wp_enqueue_script('validate', get_template_directory_uri() . '/js/validate.js', '', 1, true);
+	add_action('wp_enqueue_scripts', 'validate');
+	wp_enqueue_script('methods', get_template_directory_uri() . '/js/methods.js', '', 1, true);
+	add_action('wp_enqueue_scripts', 'methods');
 }
 add_action('wp_enqueue_scripts', 'include_jquery');
 

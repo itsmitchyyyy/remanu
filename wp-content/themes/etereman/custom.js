@@ -2,9 +2,61 @@
 /* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('5489-448-10-3475');
 
+function getSchool() {
+    return axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/education/schools');
+}
+
+function getDegrees() {
+    return axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/education/degrees');
+}
+
+function getDisciplines() {
+    return axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/education/disciplines');
+}
+
+// form validator
+$.validator.setDefaults({
+    errorClass: 'invalid',
+    validClass: "valid",
+    errorPlacement: function (error, element) {
+        $(element)
+            .closest("form")
+            .find("#error"+element.attr("id"))
+            .attr('data-error', error.text());
+    },
+    submitHandler: function (form) {
+        data = new FormData();
+        data.append('first_name', $(form).find("input[name='first_name']").val());
+        data.append('last_name', $(form).find("input[name='last_name']").val());
+        data.append('email', $(form).find("input[name='email']").val());
+        data.append('phone', $(form).find("input[name='phone']").val());
+        data.append('resume', document.querySelector('#resume').files[0]);
+        const base64data = btoa('7d5be7aeab7007ed8fb98cac70d79b29-1');
+        axios({
+            method: 'post',
+            url: 'https://boards-api.greenhouse.io/v1/boards/etereman/jobs/1616345',
+            headers: {
+                'Authorization': `Basic ${base64data}`,
+                'Content-Type': 'multipart/form-data',
+            },
+            data: data
+        }).then(function(response){
+            console.log(response);
+        });
+    }
+});
+
+$("#apply-form").validate({
+    rules: {
+        dateField: {
+            date: true
+        }
+    }
+});
+
 // jquery
 $(function(){
-
+    
     var urlParams = new URLSearchParams(window.location.search);
     var area = urlParams.get('area');
     var position = urlParams.get('position');
@@ -24,7 +76,7 @@ $(function(){
         window.history.back();
     });
 
-    if(/career-details/.test(window.location.href)) {
+    if(/details/.test(window.location.href)) {
         axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/jobs/'+id)
             .then(function(response) {
                 $('#jobTitle').html('<h4>'+response.data.title+'</h4>');
@@ -36,7 +88,7 @@ $(function(){
             });
     }
     
-    if (/careers-list/.test(window.location.href)) {
+    if (/list/.test(window.location.href)) {
         $('html, body').scrollTop(700);
         var jsonJobs = JSON.parse(sessionStorage.getItem('departments'));
         var maxSize = 0;
@@ -49,7 +101,7 @@ $(function(){
             if(area == res.name) {
                 res.jobs.map(function(job){
                     if(job.title == position && (location.indexOf(job.location.name) > -1)) {
-                        var $careerUrl = window.location.pathname + 'career-details/?id=' + job.id;
+                        var $careerUrl = window.location.pathname + 'details/?id=' + job.id;
                         var $option = `<div class="row w-100"><div class="col s5"><a href="`+$careerUrl+`">`+job.title+`</a></div>
                         <div class="col s5">`+job.location.name+`</div>
                         <div class="col s2">`+moment(job.updated_at).format('MM/DD/YY')+`</div></div>`;
@@ -59,7 +111,7 @@ $(function(){
             }
             if(area == null && position == null && location == null) {
             res.jobs.map(function(job){
-                    var $careerUrl = window.location.pathname + 'career-details/?id=' + job.id;
+                    var $careerUrl = window.location.pathname + 'details/?id=' + job.id;
                     var $option = `<div class="row w-100"><div class="col s5"><a href="`+$careerUrl+`">`+job.title+`</a></div>
                     <div class="col s5">`+job.location.name+`</div>
                     <div class="col s2">`+moment(job.updated_at).format('MM/DD/YY')+`</div></div>`;
@@ -67,6 +119,46 @@ $(function(){
             });
         }
         });
+    }
+
+    if (/apply/.test(window.location.href)) {
+        var $applySchool = $('#applySchool');
+        var $applyDegree = $('#applyDegree');
+        var $applyDiscipline = $('#applyDiscipline');
+        axios.all([getSchool(), getDegrees(), getDisciplines()])
+            .then(axios.spread(function(schools, degrees, disciplines) {
+                // schools data
+                schools.data.items.map(function(school) {
+                    var $option = $('<option>');
+                        $option
+                            .val(school[$applySchool.attr('data-valueKey')])
+                            .text(school[$applySchool.attr('data-displayKey')]);
+                        
+                        $applySchool.append($option);
+                });
+                // degrees data
+                degrees.data.items.map(function(degree) {
+                    var $option = $('<option>');
+                        $option
+                            .val(degree[$applyDegree.attr('data-valueKey')])
+                            .text(degree[$applyDegree.attr('data-displayKey')]);
+                        
+                        $applyDegree.append($option);
+                });
+                // discipline data
+                disciplines.data.items.map(function(discipline) {
+                    var $option = $('<option>');
+                        $option
+                            .val(discipline[$applyDiscipline.attr('data-valueKey')])
+                            .text(discipline[$applyDiscipline.attr('data-displayKey')]);
+                        
+                        $applyDiscipline.append($option);
+                });
+                // populate select 
+                $applySchool.formSelect();
+                $applyDegree.formSelect();
+                $applyDiscipline.formSelect();
+            }));
     }
 
     var tabLink = window.location.hash;  
@@ -137,6 +229,7 @@ $(function(){
 
     $('.tabs').tabs();
 
+    $('.datepicker').datepicker();
     $('select').formSelect();
 
     $('div.lazyload').lazyload();

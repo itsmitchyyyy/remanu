@@ -190,7 +190,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column tab-careers-search-job">
-                    <form id="searchBoxForm" action="<?php echo get_site_url() ?>/careers-list">
+                    <form id="searchBoxForm" action="<?php echo get_site_url() ?>/careers/list">
                     <div class="d-flex flex-column">
                         <h5>Search Jobs</h5>
                         <small>Begin the application process by checking out our current openings.</small>
@@ -252,6 +252,5 @@
         </div>
     </div>
     </div>
-    <?php include(get_template_directory().'/misc/chat-box.php') ?>
 </div>
 <?php get_footer() ?>
