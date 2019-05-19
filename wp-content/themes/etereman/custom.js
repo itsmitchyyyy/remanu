@@ -14,6 +14,10 @@ function getDisciplines() {
     return axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/education/disciplines');
 }
 
+function getJob(id) {
+    return axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/jobs/'+id+'?questions=true');
+}
+
 // form validator
 $.validator.setDefaults({
     errorClass: 'invalid',
@@ -26,11 +30,29 @@ $.validator.setDefaults({
     },
     submitHandler: function (form) {
         data = new FormData();
+        $('.questions').each(function(){
+            if($(this).val() != '')
+                data.append(`${$(this).val()}`, $(form).find(`#${$(this).data('input')}`).val());
+        });
+        var startDate = $(form).find("input[name='start_date']").val().split("/");
+        var endDate = $(form).find("input[name='end_date']").val().split("/");
         data.append('first_name', $(form).find("input[name='first_name']").val());
         data.append('last_name', $(form).find("input[name='last_name']").val());
         data.append('email', $(form).find("input[name='email']").val());
         data.append('phone', $(form).find("input[name='phone']").val());
+        if( document.querySelector('#resume').files[0] != undefined) {
         data.append('resume', document.querySelector('#resume').files[0]);
+        }
+        if( document.querySelector('#cover_letter').files[0] != undefined) {
+        data.append('cover_letter', document.querySelector('#cover_letter').files[0]);
+        }
+        data.append("educations[]['start_date']['month']", startDate[0]);
+        data.append("educations[]['start_date']['year']", startDate[2]);
+        data.append("educations[]['end_date']['month']", endDate[0]);
+        data.append("educations[]['end_date']['year']", endDate[2]);
+        data.append("educations[]['school_name_id']", $(form).find("#applySchool").val());
+        data.append("educations[]['degree_id']", $(form).find("#applyDegree").val());
+        data.append("educations[]['discipline_id']", $(form).find("#applyDiscipline").val());
         const base64data = btoa('7d5be7aeab7007ed8fb98cac70d79b29-1');
         axios({
             method: 'post',
@@ -41,7 +63,9 @@ $.validator.setDefaults({
             },
             data: data
         }).then(function(response){
-            console.log(response);
+            $('#apply-form')[0].reset();
+            alert(response.data.success);
+            window.location.href = window.location.pathname.substring(0, window.location.pathname.indexOf('apply')) + 'list';
         });
     }
 });
@@ -77,6 +101,9 @@ $(function(){
     });
 
     if(/details/.test(window.location.href)) {
+        var currentLocation = window.location.pathname;
+        var toApply = currentLocation.substring(0, currentLocation.indexOf('list'));
+        $('#applyNow').attr('href', toApply + 'apply?id=' + id);
         axios.get('https://boards-api.greenhouse.io/v1/boards/etereman/jobs/'+id)
             .then(function(response) {
                 $('#jobTitle').html('<h4>'+response.data.title+'</h4>');
@@ -125,8 +152,18 @@ $(function(){
         var $applySchool = $('#applySchool');
         var $applyDegree = $('#applyDegree');
         var $applyDiscipline = $('#applyDiscipline');
-        axios.all([getSchool(), getDegrees(), getDisciplines()])
-            .then(axios.spread(function(schools, degrees, disciplines) {
+        axios.all([getSchool(), getDegrees(), getDisciplines(), getJob(id)])
+            .then(axios.spread(function(schools, degrees, disciplines, job) {
+                // job data
+                    $('#jobTitle').text(job.data.title);
+                    $('#jobLocation').text(job.data.location.name);
+                    job.data.questions.map(function(question) {
+                        $('.questions').each(function(){
+                            if($(this).data('holder') == question.label) {
+                               $(this).val(question.fields[0].name);
+                            }
+                        });
+                });
                 // schools data
                 schools.data.items.map(function(school) {
                     var $option = $('<option>');
@@ -229,7 +266,9 @@ $(function(){
 
     $('.tabs').tabs();
 
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: 'm/d/yyyy'
+    });
     $('select').formSelect();
 
     $('div.lazyload').lazyload();

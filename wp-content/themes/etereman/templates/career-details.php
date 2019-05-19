@@ -7,7 +7,7 @@
                    <h5><span class="fa fa-angle-left"></span>
                     <span>Back to Search Results</span></h5>
                 </a>
-                <button class="btn waves-effect waves-light default-bg w-25 margin-t-2">APPLY NOW</button>
+                <a id="applyNow" class="btn waves-effect waves-light default-bg w-25 margin-t-2">APPLY NOW</a>
             </div>
             <div class="d-flex flex-column job-content">
                 <div class="job-title" id="jobTitle">

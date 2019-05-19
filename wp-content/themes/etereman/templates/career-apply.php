@@ -10,8 +10,8 @@
         </div>
         <div class="d-flex flex-column">
             <h4>Apply for this Job:</h4>
-            <span><h5>Customer Support Specialist</h5>
-            <h6>HQ - 8700 N. Servite Drive</h6></span>
+            <span><h5 id="jobTitle"></h5>
+            <h6 id="jobLocation"></h6></span>
         </div>
         <div class="divider margin-t-1"></div>
         <div class="d-flex flex-column">
@@ -48,7 +48,7 @@
                     <div class="col s6 file-field input-field">
                         <div class="btn default-bg">
                             <span>Cover Letter</span>
-                            <input type="file" name="cover_letter">
+                            <input type="file" id="cover_letter" name="cover_letter">
                         </div>
                         <div class="file-path-wrapper">
                             <input type="text" class="file-path validate" placeholder="Choose File">
@@ -80,7 +80,6 @@
                     <div class="col s6 input-field">
                         <select id="applyDegree" data-valueKey="id" data-displayKey="text" name="applyDegree" required="" aria-required="true">
                             <option value="" disabled selected>Select a Degree</option>
-                            <option value="School">Degree</option>
                         </select>
                         <label for="applyDegree">Degree</label>
                         <span class="helper-text" id="errorapplyDegree"></span>
@@ -90,7 +89,6 @@
                     <div class="col s6 input-field">
                         <select id="applyDiscipline" data-valueKey="id" data-displayKey="text" name="applyDiscipline" required="" aria-required="true">
                             <option value="" disabled selected>Select a Discipline</option>
-                            <option value="School">Discipline</option>
                         </select>
                         <label for="applyDiscipline">Discipline</label>
                         <span class="helper-text" id="errorapplyDiscipline"></span>
@@ -113,6 +111,7 @@
                 <div class="divider"></div>
                 <div class="row career-apply-form">
                     <div class="col s6 input-field">
+                        <input class="questions" data-input="desired_salary" data-holder="Desired Salary" type="hidden" id="#desired_salaryQuestion">
                         <label for="desired_salary">Desired Salary</label>
                         <input type="text" id="desired_salary" name="desired_salary" required="" aria-required="true">
                         <span class="helper-text" id="errordesired_salary"></span>
@@ -120,18 +119,21 @@
                 </div>
                 <div class="row career-apply-form">
                     <div class="col s6 input-field">
+                        <input class="questions" data-input="linkedin_profile" data-holder="LinkedIn Profile" type="hidden" id="#linkedin_profileQuestion">
                         <label for="linkedin_profile">LinkedIn Profile</label>
                         <input type="text" id="linkedin_profile" name="linkedin_profile">
                     </div>
                 </div>
                 <div class="row career-apply-form">
                     <div class="col s6 input-field">
+                        <input class="questions" data-input="heard_about_this_job" data-holder="How did you hear about this job?"  type="hidden" id="#heard_about_this_jobQuestion">
                         <label for="heard_about_this_job">How did you hear about this job?</label>
                         <textarea class="materialize-textarea h-100" rows="5" cols="30" id="heard_about_this_job" name="heard_about_this_job"></textarea>
                     </div>
                 </div>
                 <div class="row career-apply-form">
                     <div class="col s6 input-field">
+                        <input class="questions" data-input="start_job" type="hidden" data-holder="When are you available to start?" id="#start_jobQuestion">
                         <label for="start_job">When are you available to start?</label>
                         <input type="text" id="start_job" name="start_job">
                     </div>
