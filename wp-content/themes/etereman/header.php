@@ -30,7 +30,7 @@
 					<a href="#">car care centers</a>
 					</span>
 				</div>
-				<div class="col s2 headline-icons">
+				<!-- <div class="col s2 headline-icons">
 					<span>
 						<i class="fa fa-envelope"></i>
 					</span>
@@ -43,7 +43,7 @@
 					<span>
 						<i class="fab fa-linkedin"></i>
 					</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 					</li>
 				<?php endforeach; ?>
 				<div class="searchbar">
-					<input type="text" id="search" placeholder="Search Here..">
+					<input type="text" id="searchPage" placeholder="Search Here..">
 					<span class="fa fa-search"></span>
 				</div>
 	      </ul>
@@ -116,12 +116,12 @@
 			<a href="#">car care centers</a>
 		</li>
 		<div class="searchbar">
-				<input type="text" id="search" placeholder="Search Here..">
+				<input type="text" id="searchPage" placeholder="Search Here..">
 				<span class="fa fa-search"></span>
 			</div>
 
-		<div class="divider margin-r-1 margin-l-1"></div>
-		<div class="headline-icons-mobile margin-t-1">
+		<!-- <div class="divider margin-r-1 margin-l-1"></div> -->
+		<!-- <div class="headline-icons-mobile margin-t-1">
 			<span>
 				<i class="fa fa-envelope"></i>
 			</span>
@@ -134,5 +134,5 @@
 			<span>
 				<i class="fab fa-linkedin"></i>
 			</span>
-		</div>
+		</div> -->
   </ul>

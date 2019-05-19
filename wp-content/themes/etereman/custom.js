@@ -264,6 +264,11 @@ $(function(){
     //     olark('api.box.hide');    
     // });
 
+    $('#searchPage').on('input.highlight', function(){
+        var searchTerm = $(this).val();
+        $('body').unmark().mark(searchTerm);
+    }).trigger("input.highlight").focus();
+
     $('.tabs').tabs();
 
     $('.datepicker').datepicker({

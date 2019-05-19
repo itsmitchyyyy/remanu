@@ -10,7 +10,7 @@
             <div class="footer-text">
                 <span>Have any questions? <b>1-800-934-9479</b></span>
             </div>
-            <div class="footer-icons">
+            <!-- <div class="footer-icons">
                 <span>
                     <i class="fa fa-envelope"></i>
                 </span>
@@ -23,7 +23,7 @@
                 <span>
                     <i class="fab fa-linkedin"></i>
                 </span>
-            </div>
+            </div> -->
         </div>
         <div class="footer-copyright">
             <span>&copy; 2018 ETE REMAN, ALL RIGHTS RESERVED</span>

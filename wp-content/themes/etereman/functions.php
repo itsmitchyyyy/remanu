@@ -70,6 +70,8 @@ function loadjs() {
 	wp_enqueue_script('lazyloadjs');
 	wp_register_script('momentjs', get_template_directory_uri() . '/js/moment.js', '', 1, true);
 	wp_enqueue_script('momentjs');
+	wp_register_script('markjs', get_template_directory_uri() . '/js/mark.js', '', 1, true);
+	wp_enqueue_script('markjs');
 	wp_register_script('customjs', get_template_directory_uri() . '/custom.js', '', 1, true);
 	wp_enqueue_script('customjs');
 }
