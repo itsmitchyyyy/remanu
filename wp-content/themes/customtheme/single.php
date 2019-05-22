@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container-fluid inside-page-container pt-5 bg-light">
-	<div class="d-flex flex-column mr-5 ml-5 mb-5 article-container">
+	<div class="d-flex flex-column mr-5 ml-5 pb-5 article-container">
 		<div class="d-flex flex-column mb-2 mt-2">
 			<h3 style="text-transform: uppercase"><?php the_title() ?></h3>
 		</div>

@@ -3,6 +3,7 @@
 require get_template_directory() . '/wp-boostrap-navwalker.php';
 
 add_theme_support('menus');
+add_post_type_support( 'page', 'excerpt' );
 
 add_action('after_setup_theme', 'nav_setup');
 if (!function_exists('nav_setup')) {
@@ -51,8 +52,6 @@ function load_stylesheets() {
 	wp_enqueue_style('style');
 	wp_register_style('font-style', get_template_directory_uri() . '/font.css', array(), false, 'all');
 	wp_enqueue_style('font-style');
-	wp_register_style('fontawesome-icons', get_template_directory_uri() . '/fonts/font-awesome-icons/css/all.min.css', array(), false, 'all');
-	wp_enqueue_style('fontawesome-icons');
 
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
